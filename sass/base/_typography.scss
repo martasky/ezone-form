@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "shapiro-regular";
+    src: url(/assets/typefaces/sharpiro-regular.woff2) format("woff2");
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: "shapiro-bold";
+    src: url(/assets/typefaces/sharpiro-bold.woff2) format("woff2");
+    font-style: normal;
+    font-weight: normal;
+
+}
+:root {
+    --primary-font: "shapiro-regular", arial, sans-serif;
+    --secondary-font: "shapiro-bold", arial, sans-serif;
+    --orange-dark: #FFB591;
+    --orange-medium: #FFB591;
+    --orange-light: #F8DDCE;
+    --blue-dark:#3E14D6;
+    --blue-medium:#6259FA;
+    --green-dark: #5BE080;
+    --blue-light: #CACEFC;
+    --grey-dark: #16162A;
+    --grey-medium: #3F3F50;
+    --grey-light: #A5A5AC;
+    --grey-pastel: #E3E3E5;
+}
+
