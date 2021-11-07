@@ -17,12 +17,32 @@ footer img {
   place-items: center;
 }
 .value_wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 5rem;
+  justify-items: center;
 }
-.value_icon {
+.value_icon img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 70%;
+  text-align: center;
 }
 
 #form_wrapper {
   background-color: #16152b;
+}
+.value_description {
+  font-size: 1rem;
+  color: white;
+  font-family: var(--primary-font);
 }
