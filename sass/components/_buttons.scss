@@ -1,0 +1,72 @@
+@import url(../base/_typography.scss);
+
+button {
+    border:none;
+    background: var(--blue-medium);
+    border-radius: 33px;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--grey-pastel);
+    transition: 0.5s ease-in;
+}
+
+button:hover {
+    background: var(--blue-dark);
+}
+
+.btn_next {
+    border: solid 2px var(--orange-dark);
+    background: transparent;
+    border-radius: 33px;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--orange-dark);
+}
+
+.btn_next::after {
+    content: url(/assets/arrows/arrow-next.svg);
+    width:20px;
+    height:10px;
+    float: right;
+    margin-left: 10px
+   
+}
+.btn_next:hover {
+    background: var(--orange-dark);
+    color:white;
+}
+
+.btn_previous {
+    border: solid 2px var(--orange-light);
+    background: transparent;
+    border-radius: 33px;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--orange-light);
+}
+
+.btn_previous::before {
+    content: url(/assets/arrows/arrow-next.svg);
+    transform-origin:bottom;
+    transform:rotate(180deg);
+    width:20px;
+    height:10px;
+    float: left;
+    margin-right: 10px;
+}
+
+.btn_previous:hover {
+    background: var(--orange-light);
+    color:var(--grey-dark);
+}
+
+
+
+
+
+
+
+
