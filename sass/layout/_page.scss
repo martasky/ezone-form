@@ -1,2 +1,28 @@
 @use "../components/buttons";
 @use "../base/typography";
+
+header,
+.background,
+footer {
+  background-color: #16152b;
+}
+header img,
+.background img,
+footer img {
+  object-fit: cover;
+}
+#value_proposition {
+  background-color: #16152b;
+  display: grid;
+  place-items: center;
+}
+.value_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.value_icon {
+}
+
+#form_wrapper {
+  background-color: #16152b;
+}
