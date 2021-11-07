@@ -1,2 +1,42 @@
 @use "../components/buttons";
 @use "../base/typography";
+
+
+form {
+    color:var(--main-typography-color);
+    font-family: var(--primary-font);
+    margin: 0 1rem;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 500px) {
+    form {
+        margin:0 2rem
+    }
+}
+
+@media screen and (min-width: 700px) {
+    form {
+        margin:0 5rem;
+        padding: 4rem 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    form {
+        margin:0 15rem;
+        padding: 4rem 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    form {
+        margin:0 18rem
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    form {
+        margin: 0 35rem
+    }
+}
