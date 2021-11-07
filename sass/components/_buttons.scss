@@ -2,27 +2,27 @@
 
 button {
     border:none;
-    background: var(--blue-medium);
+    background: var(--join-cta);
     border-radius: 33px;
     padding: 0.5rem 1.5rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
-    color: var(--grey-pastel);
+    color: var(--placeholder);
     transition: 0.5s ease-in;
 }
 
 button:hover {
-    background: var(--blue-dark);
+    background: var(--join-cta-hover);
 }
 
 .btn_next {
-    border: solid 2px var(--orange-dark);
+    border: solid 2px var(--focused-field);
     background: transparent;
     border-radius: 33px;
     padding: 0.5rem 1.5rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
-    color: var(--orange-dark);
+    color: var(--focused-field);
 }
 
 .btn_next::after {
@@ -34,18 +34,18 @@ button:hover {
    
 }
 .btn_next:hover {
-    background: var(--orange-dark);
+    background: var(--focused-field);
     color:white;
 }
 
 .btn_previous {
-    border: solid 2px var(--orange-light);
+    border: solid 2px var(--unfocused-field);
     background: transparent;
     border-radius: 33px;
     padding: 0.5rem 1.5rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
-    color: var(--orange-light);
+    color: var(--unfocused-field);
 }
 
 .btn_previous::before {
@@ -59,11 +59,9 @@ button:hover {
 }
 
 .btn_previous:hover {
-    background: var(--orange-light);
-    color:var(--grey-dark);
+    background: var(--unfocused-field);
+    color:var(--button-back-hover);
 }
-
-
 
 
 

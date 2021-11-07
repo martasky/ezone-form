@@ -16,16 +16,14 @@
 :root {
     --primary-font: "shapiro-regular", arial, sans-serif;
     --secondary-font: "shapiro-bold", arial, sans-serif;
-    --orange-dark: #FFB591;
-    --orange-medium: #FFB591;
-    --orange-light: #F8DDCE;
-    --blue-dark:#3E14D6;
-    --blue-medium:#6259FA;
-    --green-dark: #5BE080;
-    --blue-light: #CACEFC;
-    --grey-dark: #16162A;
-    --grey-medium: #3F3F50;
-    --grey-light: #A5A5AC;
-    --grey-pastel: #E3E3E5;
+    --focused-field: #F48D69;
+    --main-typography-color: #FFB591;
+    --unfocused-field: #F8DDCE;
+    --join-cta:#6259FA;
+    --join-cta-hover:#3E14D6;
+    --valid: #5BE080;
+    --invalid:#E05B5B; 
+    --button-back-hover: #16162A;
+    --placeholder: #E3E3E5;
 }
 
