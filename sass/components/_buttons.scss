@@ -9,6 +9,7 @@ button {
     text-transform: uppercase;
     color: var(--placeholder);
     transition: 0.5s ease-in;
+    cursor:pointer;
 }
 
 button:hover {
@@ -30,9 +31,10 @@ button:hover {
     width:20px;
     height:10px;
     float: right;
-    margin-left: 10px
-   
+    margin-left: 10px;
+    transition: 0.3 ease-out;
 }
+
 .btn_next:hover {
     background: var(--focused-field);
     color:white;
@@ -49,9 +51,9 @@ button:hover {
 }
 
 .btn_previous::before {
-    content: url(/assets/arrows/arrow-next.svg);
+    content: url(/assets/arrows/arrow-back.svg);
     transform-origin:bottom;
-    transform:rotate(180deg);
+
     width:20px;
     height:10px;
     float: left;
