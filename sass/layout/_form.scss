@@ -6,7 +6,49 @@ form {
   font-size: 1.2rem;
   margin: 0 1.5rem;
   padding: 2rem 0;
+
+//form displaying in steps
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr;
 }
+
+.form_group {
+  background-color: var(--background-color);
+  opacity:0;
+  pointer-events: none;
+  display:none;
+}
+
+.visible {
+  display:block;
+opacity:1;
+pointer-events: all;
+}
+
+#step_1, 
+#step_2,
+#step_3,
+#step_4
+{
+  grid-area: 1/1;
+}
+
+#step_4 {
+  order: -4;
+}
+
+#step_3 {
+  order: -3;
+}
+
+#step_2 {
+  order: -2;
+}
+
+
+
+
 
 #form_wrapper h1 {
   margin: 0 1.5rem;
@@ -394,4 +436,35 @@ input[type="text"],
       background-image:none
     }
   }
+
+
+//progress bar
+
+.cls-1, .cls-2, .cls-5 {
+  fill: #e3e3e5;
+}
+
+.cls-1, .cls-3 {
+  stroke: #e3e3e5;
+}
+
+.cls-1, .cls-2, .cls-3 {
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 19px;
+}
+
+.cls-2 {
+  stroke: #f48d69;
+}
+
+.cls-3 {
+  fill: #16162a;
+}
+
+.cls-4 {
+  fill: #fff;
+}
+
+
 
