@@ -343,3 +343,55 @@ input[type="radio"]:checked + .radio-text {
 }
 
 
+//valid invalid and focus
+
+input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+
+    
+    &:invalid {
+      background-image: url(/assets/validation/invalid.svg);
+      background-size: 16px 18px;
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+ 
+    &:valid {
+      background-image: url(/assets/validation/valid.svg);
+      background-size: 16px 18px;
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    &:placeholder-shown{
+      background-image:none
+    }
+    &:focus{
+      border-bottom: solid 2px var(--focused-field);
+    }
+  }
+
+ 
+  
+  .input_group, 
+  span .hint,
+  label[for="name"],
+  label[for="email"],
+  label[for="gamertag"],
+  label[for="password"],
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    &:focus-within{
+      color: var(--focused-field)
+    }
+  }
+
+  input[id="types-game"],
+  input[id="games-played"]{
+    &:valid{
+      background-image:none
+    }
+  }
+
