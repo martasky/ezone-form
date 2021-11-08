@@ -3,6 +3,7 @@
 form {
   color: var(--main-typography-color);
   font-family: var(--primary-font);
+  font-size: 1.2rem;
   margin: 0 1.5rem;
   padding: 2rem 0;
 }
@@ -14,6 +15,7 @@ form {
   font-family: var(--secondary-font);
   text-align: center;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 #form_wrapper h1 span {
@@ -26,10 +28,41 @@ form {
   color: var(--main-typography-color);
   font-family: var(--primary-font);
   margin: 0 1.5rem;
+  font-size: 1.3rem;
 }
 
 #form_wrapper p:nth-of-type(2) {
   margin-top: 1rem;
+}
+
+label[for="types-game"] span,
+label[for="games-played"] span {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+select {
+  appearance: none;
+  font-family: var(--primary-font);
+  color: var(--main-typography-color);
+  background-color: var(--background-color);
+  margin-top: 3rem;
+  padding: 0 1rem 1rem 1rem;
+  height: 13vh;
+  font-size: 1rem;
+  border: none;
+  border-left: solid 2px var(--main-typography-color);
+  max-width: 50%;
+  overflow-y: scroll;
+}
+
+option {
+  margin-left: 1vw;
+}
+option:checked {
+  color: var(--focused-field);
+  background-color: var(--background-color);
+  font-weight: 700;
 }
 
 .progress_bar {
