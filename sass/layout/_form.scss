@@ -158,7 +158,8 @@ form {
 }
 // Checkboxes
 
-.standard-checkbox {
+.standard-checkbox,
+.image-checkbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -166,9 +167,7 @@ form {
   margin-bottom: 4rem;
 }
 .standard-checkbox ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: grid;
   gap: 1.3rem;
   margin-top: 1rem;
 }
@@ -183,7 +182,8 @@ form {
   flex-direction: row;
   gap: 1rem;
 }
-.standard-checkbox span {
+.standard-checkbox span,
+.image-checkbox span {
   margin-top: 0.5rem;
 }
 
@@ -200,4 +200,77 @@ form {
 
 .standard-checkbox label {
   color: var(--unfocused-field);
+  grid-area: 1/1;
+}
+
+// Checkboxes with images
+.nutrition-icon,
+.improve-icon {
+  width: 4rem;
+  margin-bottom: 0.2rem;
+  z-index: 6;
+  pointer-events: none;
+}
+.image-checkbox ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  row-gap: 2rem;
+  width: 70%;
+  margin-top: 2rem;
+}
+
+.image-checkbox ul li {
+  /*   display: flex;
+  flex-direction: column; */
+  display: grid;
+
+  padding: 0.5rem;
+  place-items: center;
+  position: relative;
+}
+
+.image-checkbox label {
+  color: var(--unfocused-field);
+  cursor: pointer;
+  grid-area: 1 / 1;
+}
+
+.image-checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: var(--bg, #fff); */
+  border-radius: 10px;
+
+  border: 2px solid white;
+  z-index: 1;
+}
+.image-checkbox input:checked ~ label::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: var(--unfocused-field);
+  border: 2px solid var(--unfocused-field);
+}
+.image-checkbox .nutrition-label,
+.image-checkbox .improve-label {
+  z-index: 8;
+  color: var(--unfocused-field);
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+.image-checkbox input:checked ~ .nutrition-label,
+.image-checkbox input:checked ~ .improve-label {
+  color: #16162a;
+  font-family: var(--primary-font);
 }
