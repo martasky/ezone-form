@@ -7,7 +7,7 @@ form {
   padding: 2rem 0;
 }
 
-#form_wrapper h1{
+#form_wrapper h1 {
   margin: 0 1.5rem;
   padding: 2rem;
   color: var(--main-typography-color);
@@ -16,40 +16,39 @@ form {
   font-size: 2rem;
 }
 
-
 #form_wrapper h1 span {
-  display:block;
--webkit-text-stroke: 1px var(--main-typography-color) ;
--webkit-text-fill-color: transparent;
-
+  display: block;
+  -webkit-text-stroke: 1px var(--main-typography-color);
+  -webkit-text-fill-color: transparent;
 }
 
-#form_wrapper p{
+#form_wrapper p {
   color: var(--main-typography-color);
   font-family: var(--primary-font);
   margin: 0 1.5rem;
 }
 
-#form_wrapper p:nth-of-type(2){
+#form_wrapper p:nth-of-type(2) {
   margin-top: 1rem;
 }
 
-.progress_bar{
-  margin: 2rem 1rem 1rem 1rem
+.progress_bar {
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 @media screen and (min-width: 500px) {
   form {
     margin: 0 2rem;
   }
-  #form_wrapper h1, #form_wrapper p{
+  #form_wrapper h1,
+  #form_wrapper p {
     margin: 0 2rem;
   }
 
-  #form_wrapper h1{
+  #form_wrapper h1 {
     font-size: 2.5rem;
   }
-  #form_wrapper h1 span{
+  #form_wrapper h1 span {
     margin-top: -10px;
   }
 }
@@ -60,47 +59,46 @@ form {
     padding: 2vh 0 5vh 0;
   }
 
-  .progress_bar{
+  .progress_bar {
     margin: 2vh 15vw 0 15vw;
   }
 
-  #form_wrapper h1, #form_wrapper p{
+  #form_wrapper h1,
+  #form_wrapper p {
     margin: 0 15vw;
   }
 }
 
 @media screen and (min-width: 900px) {
-
-  #form_wrapper h1{
+  #form_wrapper h1 {
     font-size: 3rem;
   }
-  
-
 }
 
 @media screen and (min-width: 1200px) {
-  form, #form_wrapper h1, #form_wrapper p {
+  form,
+  #form_wrapper h1,
+  #form_wrapper p {
     margin: 0 18vw;
   }
 
-  .progress_bar{
+  .progress_bar {
     margin: 4vh 18vw 0 18vw;
   }
-
-  
 }
 
 @media screen and (min-width: 1700px) {
-  form, #form_wrapper h1, #form_wrapper p {
+  form,
+  #form_wrapper h1,
+  #form_wrapper p {
     margin: 0 25vw;
   }
 
-  .progress_bar{
+  .progress_bar {
     margin: 4vh 25vw 0 25vw;
   }
 }
 //Title section, labels, legend and hint text; Valid/invalid/focus
-
 
 .group_title {
   font-family: var(--secondary-font);
@@ -116,7 +114,6 @@ form {
   font-family: var(--primary-font);
   color: #f8ddce;
   font-size: 0.8rem;
-  margin-bottom: -2rem;
 }
 
 .input_group {
@@ -128,13 +125,18 @@ form {
 }
 // input text
 
-input {
+.input_group input {
   background-color: var(--background-color);
   border-bottom: 2px solid var(--unfocused-field);
   height: 50px;
   color: var(--unfocused-field);
   font-size: 1rem;
+}
+.form_group:first-of-type input {
   padding-left: 3rem;
+}
+.form_group:first-of-type .hint {
+  margin-bottom: -2rem;
 }
 ::placeholder {
   color: var(--placeholder);
@@ -150,4 +152,52 @@ input {
 .email {
   width: 30px;
   height: 30px;
+}
+.buttons_wrapper {
+  margin-top: 5rem;
+}
+// Checkboxes
+
+.standard-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+.standard-checkbox ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1.3rem;
+  margin-top: 1rem;
+}
+.standard-checkbox input {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/assets/radio-check/checkbox.svg");
+  background-repeat: no-repeat;
+}
+.standard-checkbox li {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.standard-checkbox span {
+  margin-top: 0.5rem;
+}
+
+.standard-checkbox input:checked {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/assets/radio-check/checkbox-checked.svg");
+  background-repeat: no-repeat;
+}
+
+.standard-checkbox input[type="checkbox"]:checked + label {
+  color: var(--focused-field);
+}
+
+.standard-checkbox label {
+  color: var(--unfocused-field);
 }
