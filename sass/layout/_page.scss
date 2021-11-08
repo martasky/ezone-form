@@ -3,8 +3,9 @@
 
 header,
 .background,
-footer {
-  background-color: #16152b;
+footer,
+#form_wrapper {
+  background-color: var(--background-color);
 }
 header img,
 .background img,
@@ -12,7 +13,7 @@ footer img {
   object-fit: cover;
 }
 #value_proposition {
-  background-color: #16152b;
+  background-color: var(--background-color);
   display: grid;
   place-items: center;
 }
@@ -38,9 +39,6 @@ footer img {
   text-align: center;
 }
 
-#form_wrapper {
-  background-color: #16152b;
-}
 .value_description {
   font-size: 1rem;
   color: white;

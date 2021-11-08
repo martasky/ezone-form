@@ -1,29 +1,27 @@
 @font-face {
-    font-family: "shapiro-regular";
-    src: url(/assets/typefaces/sharpiro-regular.woff2) format("woff2");
-    font-style: normal;
-    font-weight: normal;
-
+  font-family: "shapiro-regular";
+  src: url(/assets/typefaces/sharpiro-regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "shapiro-bold";
-    src: url(/assets/typefaces/sharpiro-bold.woff2) format("woff2");
-    font-style: normal;
-    font-weight: normal;
-
+  font-family: "shapiro-bold";
+  src: url(/assets/typefaces/sharpiro-bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: normal;
 }
 :root {
-    --primary-font: "shapiro-regular", arial, sans-serif;
-    --secondary-font: "shapiro-bold", arial, sans-serif;
-    --focused-field: #F48D69;
-    --main-typography-color: #FFB591;
-    --unfocused-field: #F8DDCE;
-    --join-cta:#6259FA;
-    --join-cta-hover:#3E14D6;
-    --valid: #5BE080;
-    --invalid:#E05B5B; 
-    --button-back-hover: #16162A;
-    --placeholder: #E3E3E5;
+  --primary-font: "shapiro-regular", arial, sans-serif;
+  --secondary-font: "shapiro-bold", arial, sans-serif;
+  --focused-field: #f48d69;
+  --main-typography-color: #ffb591;
+  --unfocused-field: #f8ddce;
+  --join-cta: #6259fa;
+  --join-cta-hover: #3e14d6;
+  --valid: #5be080;
+  --invalid: #e05b5b;
+  --button-back-hover: #16162a;
+  --placeholder: #e3e3e5;
+  --background-color: #16152b;
 }
-

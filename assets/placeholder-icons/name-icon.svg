@@ -5,6 +5,7 @@
         fill: none;
         stroke: #a5a5ac;
         stroke-miterlimit: 10;
+        
       }
 
       .cls-1 {
