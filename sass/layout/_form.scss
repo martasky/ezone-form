@@ -311,24 +311,35 @@ option:checked {
 //radio buttons
 
 input[type="radio"] {
-  border: none;
+
   height: 30px;
+  width:30px;
   background-image: url(/assets/radio-check/radio-button.svg);
-  background-size: 25px;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-size: cover;
+  margin-right:1vw;
+
 }
 input[type="radio"]:checked {
   background-image: url(/assets/radio-check/radio-button-checked.svg);
-  background-size: 25px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   color: var(--focused-field);
 }
 
-ul[role="list"] li label {
+input[type="radio"]:checked + .radio-text {
+  color: var(--focused-field)
+}
+
+
+
+.radio-boxes li label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1vh 0;
+  margin: 1vh 0 ;
+  color: var(--unfocused-field)
 }
+
+
