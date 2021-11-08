@@ -6,7 +6,49 @@ form {
   font-size: 1.2rem;
   margin: 0 1.5rem;
   padding: 2rem 0;
+
+//form displaying in steps
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr;
 }
+
+.form_group {
+  background-color: var(--background-color);
+  opacity:0;
+  pointer-events: none;
+  display:none;
+}
+
+.visible {
+  display:block;
+opacity:1;
+pointer-events: all;
+}
+
+#step_1, 
+#step_2,
+#step_3,
+#step_4
+{
+  grid-area: 1/1;
+}
+
+#step_4 {
+  order: -4;
+}
+
+#step_3 {
+  order: -3;
+}
+
+#step_2 {
+  order: -2;
+}
+
+
+
+
 
 #form_wrapper h1 {
   margin: 0 1.5rem;
@@ -44,7 +86,7 @@ label[for="games-played"] span {
 select {
   appearance: none;
   font-family: var(--primary-font);
-  color: var(--main-typography-color);
+  color: var(--unfocused-field);
   background-color: var(--background-color);
   margin-top: 3rem;
   padding: 0 1rem 1rem 1rem;
@@ -311,24 +353,118 @@ option:checked {
 //radio buttons
 
 input[type="radio"] {
-  border: none;
+
   height: 30px;
+  width:30px;
   background-image: url(/assets/radio-check/radio-button.svg);
-  background-size: 25px;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-size: cover;
+  margin-right:1vw;
+
 }
 input[type="radio"]:checked {
   background-image: url(/assets/radio-check/radio-button-checked.svg);
-  background-size: 25px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   color: var(--focused-field);
 }
 
-ul[role="list"] li label {
+input[type="radio"]:checked + .radio-text {
+  color: var(--focused-field)
+}
+
+
+
+.radio-boxes li label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1vh 0;
+  margin: 1vh 0 ;
+  color: var(--unfocused-field)
 }
+
+
+//valid invalid and focus
+
+input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+
+    
+    &:invalid {
+      background-image: url(/assets/validation/invalid.svg);
+      background-size: 16px 18px;
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+ 
+    &:valid {
+      background-image: url(/assets/validation/valid.svg);
+      background-size: 16px 18px;
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    &:placeholder-shown{
+      background-image:none
+    }
+    &:focus{
+      border-bottom: solid 2px var(--focused-field);
+    }
+  }
+
+ 
+  
+  .input_group, 
+  span .hint,
+  label[for="name"],
+  label[for="email"],
+  label[for="gamertag"],
+  label[for="password"],
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    &:focus-within{
+      color: var(--focused-field)
+    }
+  }
+
+  input[id="types-game"],
+  input[id="games-played"]{
+    &:valid{
+      background-image:none
+    }
+  }
+
+
+//progress bar
+
+.cls-1, .cls-2, .cls-5 {
+  fill: #e3e3e5;
+}
+
+.cls-1, .cls-3 {
+  stroke: #e3e3e5;
+}
+
+.cls-1, .cls-2, .cls-3 {
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 19px;
+}
+
+.cls-2 {
+  stroke: #f48d69;
+}
+
+.cls-3 {
+  fill: #16162a;
+}
+
+.cls-4 {
+  fill: #fff;
+}
+
+
+
