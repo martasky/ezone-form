@@ -2,35 +2,34 @@
 @use "../base/typography";
 form {
   font-family: var(--primary-font);
-  color:white;
+  color: white;
   font-size: 1.2rem;
   margin: 0 1.5rem;
   padding: 2rem 0;
 
-//form displaying in steps
-  display:grid;
+  //form displaying in steps
+  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
 }
 
 .form_group {
   background-color: var(--background-color);
-  opacity:0;
+  opacity: 0;
   pointer-events: none;
-  display:none;
+  display: none;
 }
 
 .visible {
-  display:block;
-opacity:1;
-pointer-events: all;
+  display: block;
+  opacity: 1;
+  pointer-events: all;
 }
 
-#step_1, 
+#step_1,
 #step_2,
 #step_3,
-#step_4
-{
+#step_4 {
   grid-area: 1/1;
 }
 
@@ -45,10 +44,6 @@ pointer-events: all;
 #step_2 {
   order: -2;
 }
-
-
-
-
 
 #form_wrapper h1 {
   margin: 0 1.5rem;
@@ -74,6 +69,7 @@ pointer-events: all;
 
 #form_wrapper p:nth-of-type(2) {
   margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 label[for="types-game"] span,
@@ -105,7 +101,6 @@ option:checked {
   color: var(--focused-field);
   background-color: var(--background-color);
   font-weight: 700;
-
 }
 
 .progress_bar {
@@ -118,13 +113,13 @@ option:checked {
   font-family: var(--secondary-font);
   font-size: 1.3rem;
   color: var(--light-purple);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .label-title {
   font-family: var(--secondary-font);
   font-size: 1rem;
-  color: var(--light-purple)
+  color: var(--light-purple);
 }
 
 .hint {
@@ -138,7 +133,7 @@ option:checked {
   flex-direction: column;
   justify-content: space-around;
   gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 // input text
 
@@ -150,10 +145,10 @@ option:checked {
   font-size: 0.9rem;
 }
 .form_group:first-of-type input {
-  padding-left: 3rem;
+  padding-left: 3.5rem;
 }
 .form_group:first-of-type .hint {
-  margin-bottom: -2rem;
+  margin-bottom: -2.5rem;
 }
 ::placeholder {
   color: var(--placeholder);
@@ -163,7 +158,7 @@ option:checked {
 .icon {
   position: relative;
   top: 45px;
-  left: 0;
+  left: 10px;
 }
 .user,
 .email {
@@ -171,26 +166,28 @@ option:checked {
   height: 30px;
 }
 .buttons_wrapper {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 // Checkboxes
 
 .standard-checkbox,
-.image-checkbox {
+.image-checkbox,
+.button-checkbox,
+.radio-field {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 0.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .standard-checkbox ul {
   display: grid;
-  gap: 1.3rem;
-  margin-top: 1rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 .standard-checkbox input {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
   background-image: url("/assets/radio-check/checkbox.svg");
   background-repeat: no-repeat;
 }
@@ -198,6 +195,7 @@ option:checked {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  justify-items: baseline;
 }
 .standard-checkbox span,
 .image-checkbox span {
@@ -205,14 +203,19 @@ option:checked {
 }
 
 .standard-checkbox input:checked {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
   background-image: url("/assets/radio-check/checkbox-checked.svg");
   background-repeat: no-repeat;
+}
+.standard-checkbox input:focus-within + label {
+  color: var(--focused-field);
+  font-weight: bold;
 }
 
 .standard-checkbox input[type="checkbox"]:checked + label {
   color: var(--focused-field);
+  font-weight: bold;
 }
 
 .standard-checkbox label {
@@ -232,11 +235,10 @@ option:checked {
 .image-checkbox ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  row-gap: 2rem;
+  gap: 1rem;
+
   width: 70%;
-  margin-top: 2rem;
-  
+  margin-top: 1rem;
 }
 
 .image-checkbox ul li {
@@ -290,28 +292,94 @@ option:checked {
 .image-checkbox input:checked ~ .nutrition-label,
 .image-checkbox input:checked ~ .improve-label {
   color: #16162a;
+  font-weight: bold;
   font-family: var(--primary-font);
+}
+// Checkboxes "buttons"
+
+.button-checkbox ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  column-gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.button-checkbox ul li {
+  /*   display: flex;
+  flex-direction: column; */
+  display: grid;
+
+  padding: 0.5rem 1rem;
+  place-items: center;
+  position: relative;
+}
+
+.button-checkbox label {
+  color: var(--unfocused-field);
+  cursor: pointer;
+  grid-area: 1 / 1;
+}
+
+.button-checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: var(--bg, #fff); */
+  border-radius: 30px;
+
+  border: 2px solid white;
+  z-index: 1;
+}
+.button-checkbox input:checked ~ label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 30px;
+  background-color: white;
+  border: 2px solid white;
+}
+
+.button-checkbox .games-label {
+  z-index: 8;
+  color: var(--unfocused-field);
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.button-checkbox input:checked ~ .games-label {
+  color: #16162a;
+  font-family: var(--primary-font);
+  font-weight: bold;
 }
 
 //radio buttons
 
 input[type="radio"] {
-
-  height: 30px;
-  width:30px;
+  height: 1.4rem;
+  width: 1.4rem;
   background-image: url(/assets/radio-check/radio-button.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right:1vw;
-
+  margin-right: 15px;
 }
 
-
 input[type="radio"]:checked {
+  height: 1.4rem;
+  width: 1.4rem;
   background-image: url(/assets/radio-check/radio-button-checked.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+
   color: var(--focused-field);
 }
 
@@ -320,77 +388,80 @@ input[type="radio"]:checked {
 }
 input[type="radio"]:checked + .radio-text {
   font-weight: 700;
- 
 }
-
-
 
 .radio-boxes li label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1vh 0 ;
+  margin: 1vh 0;
 }
-
+.radio-field .hint {
+  margin-top: 0.5rem;
+}
+.radio-field input:focus-within + .radio-text {
+  color: white;
+  font-weight: bold;
+}
 
 //valid invalid and focus
 
 input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-
-    
-    &:invalid {
-      background-image: url(/assets/validation/invalid.svg);
-      background-size: 16px 18px;
-      background-repeat: no-repeat;
-      background-position: 98% 50%;
-    }
- 
-    &:valid {
-      background-image: url(/assets/validation/valid.svg);
-      background-size: 16px 18px;
-      background-repeat: no-repeat;
-      background-position: 98% 50%;
-    }
-
-    &:placeholder-shown{
-      background-image:none
-    }
-    &:focus{
-      border: solid 1px white;
-      border-radius: 13px;
-    }
+input[type="email"],
+input[type="password"] {
+  &:invalid {
+    background-image: url(/assets/validation/invalid.svg);
+    background-size: 16px 18px;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
   }
 
- 
-
-  input[id="types-game"],
-  input[id="games-played"]{
-    &:valid{
-      background-image:none
-    }
+  &:valid {
+    background-image: url(/assets/validation/valid.svg);
+    background-size: 16px 18px;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
   }
 
+  &:placeholder-shown {
+    background-image: none;
+  }
+  &:focus {
+    border: solid 1px white;
+    border-radius: 13px;
+  }
+}
+
+input[id="types-game"],
+input[id="games-played"] {
+  &:valid {
+    background-image: none;
+  }
+}
 
 //progress bar
 
-.cls-1, .cls-2, .cls-5 {
+.cls-1,
+.cls-2,
+.cls-5 {
   fill: #e3e3e5;
 }
 
-.cls-1, .cls-3 {
+.cls-1,
+.cls-3 {
   stroke: #ffffff;
 }
 
-.cls-1, .cls-2, .cls-3 {
+.cls-1,
+.cls-2,
+.cls-3 {
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 19px;
 }
 
 .cls-2 {
-  stroke: #6259FA;
+  stroke: #6259fa;
 }
 
 .cls-3 {
@@ -401,12 +472,10 @@ input[type="text"],
   fill: #fff;
 }
 .cls-focused {
-  fill: #6259FA;
+  fill: #6259fa;
 }
 
-
-
-///Media queries have been moved down 
+///Media queries have been moved down
 
 @media screen and (min-width: 500px) {
   form {
@@ -445,8 +514,8 @@ input[type="text"],
   #form_wrapper h1 {
     font-size: 3rem;
   }
-  .input_group{
-    margin-bottom: 1rem;
+  .input_group {
+    margin-bottom: 1.5rem;
   }
 }
 
