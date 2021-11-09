@@ -1,4 +1,5 @@
 import { endpoint, headers } from "./settings.js";
+import {showThankYou} from "./thankyou.js"
 
 export function post(data, callback) {
   const postData = JSON.stringify(data);
@@ -8,7 +9,5 @@ export function post(data, callback) {
     body: postData,
   })
     .then((res) => res.json())
-    .then((data) => {
-      callback(data);
-    });
+        .then(() => showThankYou());
 }

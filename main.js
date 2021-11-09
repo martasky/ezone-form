@@ -1,6 +1,7 @@
 import "./sass/style.scss";
 import { post } from "./crud.js";
 import { stepBar } from "./steps.js";
+import { previousStep, validateSteps } from "./steps";
 
 const form = document.querySelector("form");
 const submit = document.querySelector("#submit-form");
@@ -96,7 +97,7 @@ function getValue() {
   };
 }
 
-import { previousStep, validateSteps } from "./steps";
+
 
 //event listeners to advance
 document.querySelectorAll(".btn_next").forEach((button) => {

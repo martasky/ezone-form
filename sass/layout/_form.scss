@@ -445,6 +445,9 @@ input[id="games-played"] {
 }
 
 //progress bar
+circle{
+  cursor:pointer;
+}
 
 .cls-1,
 .cls-2,
@@ -480,15 +483,36 @@ input[id="games-played"] {
   fill: #6259fa;
   stroke: #ffffff;
 }
+///Thank you page
 
+#img-wrapper{
+ margin-top: 10vw;
+ display: grid; 
+ justify-content: center;
+ grid-gap: 1rem;
+ 
+}
+
+.img-container{
+  max-width: 300px;
+  cursor:pointer;
+}
+
+.img-container img{
+  transition: 1s ease-in;
+}
+
+.img-container img:hover{
+  filter: brightness(0.4);
+  transform:scale(1.1)
+}
 ///Media queries have been moved down
 
 @media screen and (min-width: 500px) {
   form {
     margin: 0 2rem;
   }
-  #form_wrapper h1,
-  #form_wrapper p {
+  #form_intro {
     margin: 0 2rem;
   }
 
@@ -498,6 +522,11 @@ input[id="games-played"] {
   #form_wrapper h1 span {
     margin-top: -10px;
   }
+
+  #img-wrapper{
+    grid-template-columns: 1fr 1fr;
+    
+   }
 }
 
 @media screen and (min-width: 700px) {
@@ -510,8 +539,7 @@ input[id="games-played"] {
     margin: 2vh 15vw 0 15vw;
   }
 
-  #form_wrapper h1,
-  #form_wrapper p {
+  #form_intro {
     margin: 0 15vw;
   }
 }
@@ -523,12 +551,22 @@ input[id="games-played"] {
   .input_group {
     margin-bottom: 1.5rem;
   }
+
+  #img-wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+  
+   .img-container:nth-of-type(2), 
+   .img-container:nth-of-type(5){
+    margin-top: -5vh;
+   }
+
+  
 }
 
 @media screen and (min-width: 1200px) {
   form,
-  #form_wrapper h1,
-  #form_wrapper p {
+  #form_intro {
     margin: 0 18vw;
   }
 
@@ -539,8 +577,7 @@ input[id="games-played"] {
 
 @media screen and (min-width: 1700px) {
   form,
-  #form_wrapper h1,
-  #form_wrapper p {
+  #form_intro {
     margin: 0 25vw;
   }
 

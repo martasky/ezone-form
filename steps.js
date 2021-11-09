@@ -9,15 +9,15 @@ export function nextStep(currentStep) {
   if (currentStep === "step_1") {
     step1.classList.remove("visible");
     step2.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   } else if (currentStep === "step_2") {
     step2.classList.remove("visible");
     step3.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   } else if (currentStep === "step_3") {
     step3.classList.remove("visible");
     step4.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   } else if (currentStep === "step_4") {
     console.log("thanks");
   }
