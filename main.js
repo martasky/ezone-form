@@ -1,5 +1,6 @@
 import "./sass/style.scss";
 import { post } from "./crud.js";
+import { stepBar } from "./steps.js";
 
 const form = document.querySelector("form");
 const submit = document.querySelector("#submit-form");
@@ -11,14 +12,14 @@ form.addEventListener("submit", (e) => {
   if (form.checkValidity()) {
     console.log("target", e.submitter.id);
     let arrays = getValue();
-    let selectArr = getSelectValue();
+
     const data = {
       name: form.elements.name.value,
       email: form.elements.email.value,
       gamertag: form.elements.gamertag.value,
       password: form.elements.password.value,
-      types: selectArr.types,
-      played: selectArr.games,
+      /*    types: selectArr.types,
+      played: selectArr.games, */
       motives: arrays.motives,
       sleep: form.elements.sleep.value,
       nutrition: arrays.nutrition,
@@ -45,6 +46,9 @@ function getValue() {
   let nutritionArr = [];
   let stressArr = [];
   let areasArr = [];
+  let typesArr = [];
+  let playedArr = [];
+
   inputElements.forEach((inputElement) => {
     let inputValue = inputElement.checked;
     console.log("input value", inputValue);
@@ -66,6 +70,14 @@ function getValue() {
         let value = inputElement.value;
 
         stressArr.push(value);
+      } else if (inputElement.name === "types") {
+        let value = inputElement.value;
+
+        typesArr.push(value);
+      } else if (inputElement.name === "played") {
+        let value = inputElement.value;
+
+        playedArr.push(value);
       } else {
         let value = inputElement.value;
 
@@ -79,24 +91,12 @@ function getValue() {
     nutrition: nutritionArr,
     stress: stressArr,
     areas: areasArr,
+    types: typesArr,
+    played: playedArr,
   };
 }
 
-function getSelectValue() {
-  let selectGames = document.querySelector("#played");
-  let selectTypes = document.querySelector("#types");
-  let selectedGames = [...selectGames.selectedOptions].map(
-    (option) => option.value
-  );
-  let selectedTypes = [...selectTypes.selectedOptions].map(
-    (option) => option.value
-  );
-  return { games: selectedGames, types: selectedTypes };
-}
-
-
-import { previousStep, validateSteps, stepBar } from "./steps";
-
+import { previousStep, validateSteps } from "./steps";
 
 //event listeners to advance
 document.querySelectorAll(".btn_next").forEach((button) => {
@@ -104,20 +104,19 @@ document.querySelectorAll(".btn_next").forEach((button) => {
     console.log("NEXT");
     //check if inputs are valid
     let currentStep = document.querySelector(".visible").id;
-    let action = button.className
-    validateSteps(currentStep)
+    let action = button.className;
+    validateSteps(currentStep);
   });
 });
 
 //event listeners for stepbar
 document.querySelectorAll("svg circle").forEach((circle) => {
-  circle.addEventListener("click", () =>{
+  circle.addEventListener("click", () => {
     let currentStep = document.querySelector(".visible").id;
-    let clickedCircle = circle.id
+    let clickedCircle = circle.id;
     stepBar(clickedCircle, currentStep);
-  })
-})
-
+  });
+});
 
 //event listeners to go back
 
@@ -128,4 +127,3 @@ document.querySelectorAll(".btn_previous").forEach((button) => {
     previousStep(currentStep);
   });
 });
-

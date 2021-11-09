@@ -47,21 +47,19 @@ export function validateSteps(currentStep, action) {
       if (document.querySelector("#email").reportValidity()) {
         if (document.querySelector("#gamertag").reportValidity()) {
           if (document.querySelector("#password").reportValidity()) {
-            nextStep(currentStep);        
+            nextStep(currentStep);
           }
         }
       }
     } else {
-      document.querySelector(`#${currentStep} .btn_next`).classList.add("dissabled");
+      document
+        .querySelector(`#${currentStep} .btn_next`)
+        .classList.add("dissabled");
     }
   } else if (currentStep === "step_2") {
-    if (document.querySelector("#types").reportValidity()) {
-      if (document.querySelector("#played").reportValidity()) {
-          nextStep(currentStep);        
-      }
-    } 
-  } else if(currentStep === "step_3") {
-    nextStep(currentStep); 
+    nextStep(currentStep);
+  } else if (currentStep === "step_3") {
+    nextStep(currentStep);
   }
   /* else if (currentStep === "step_3") {
 

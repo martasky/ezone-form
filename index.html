@@ -554,58 +554,402 @@
           </div>
           <div class="form_group" id="step_2">
             <div class="group_title">Let's dive in the game</div>
-            <div class="input_group">
-              <label for="types" class="label-title"
-                >Types of game you’re interested in
-              </label>
-              <select id="types" name="types" multiple required>
-                <option value="FPS">FPS</option>
-                <option value="MMORPG">MMORPG</option>
-                <option value="Sports">Sports</option>
-                <option value="Racing">Racing</option>
-                <option value="Tower defense">Tower defense</option>
-                <option value="RTS">RTS</option>
-                <option value="Simulation">Simulation</option>
-                <option value="Role-playing">Role-playing</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Survival">Survival</option>
-                <option value="Fighting">Fighting</option>
-                <option value="Battle royale">Battle royale</option>
-                <option value="Rhythm">Rhythm</option>
-                <option value="Platform">Platform</option>
-              </select>
-            </div>
-            <div class="input_group">
-              <label for="played" class="label-title"
-                >Your game(s)
-                <span class="hint"
-                  >Which games do you play professionally?</span
-                >
-              </label>
-              <select id="played" name="played" required>
-                <option value="CS:GO">CS:GO</option>
-                <option value="Tekken">Tekken</option>
-                <option value="FIFA">FIFA</option>
-                <option value="Super Mario">Super Mario</option>
-                <option value="Fortnite">Fortnite</option>
-                <option value="Call of Duty">Call of Duty</option>
-                <option value="The Sims">The Sims</option>
-                <option value="Mortal Combat">Mortal Combat</option>
-                <option value="Guitar Hero">Guitar Hero</option>
-                <option value="World of Warcraft">World of Warcraft</option>
-                <option value="Skyrim">Skyrim</option>
-                <option value="Starcraft">Starcraft</option>
-                <option value="Warcraft">Warcraft</option>
-                <option value="League of Legends">League of Legends</option>
-                <option value="Dota">Dota</option>
-                <option value="Valorant">Valorant</option>
-                <option value="Left for dead">Left for dead</option>
-                <option value="Overwatch">Overwatch</option>
-                <option value="PUBG">PUBG</option>
-                <option value="Diablo">Diablo</option>
-                <option value="Minecraft">Minecraft</option>
-              </select>
-            </div>
+            <fieldset class="button-checkbox">
+              <legend class="label-title">
+                Types of game you’re interested in
+              </legend>
+              <span class="hint">Choose your favourite types</span>
+              <ul role="list" class="">
+                <li>
+                  <input
+                    id="types1"
+                    type="checkbox"
+                    name="types"
+                    value="Adventure"
+                  />
+
+                  <div class="games-label">Adventure</div>
+                  <label for="types1"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types2"
+                    type="checkbox"
+                    name="types"
+                    value="Battle royale"
+                  />
+
+                  <div class="games-label">Battle royale</div>
+                  <label for="types2"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types3"
+                    type="checkbox"
+                    name="types"
+                    value="Fighting"
+                  />
+
+                  <div class="games-label">Fighting</div>
+                  <label for="types3"> </label>
+                </li>
+                <li>
+                  <input id="types4" type="checkbox" name="types" value="FPS" />
+
+                  <div class="games-label">FPS</div>
+                  <label for="types4"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types5"
+                    type="checkbox"
+                    name="types"
+                    value="MMORPG"
+                  />
+
+                  <div class="games-label">MMORPG</div>
+                  <label for="types5"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types6"
+                    type="checkbox"
+                    name="types"
+                    value="Platform"
+                  />
+
+                  <div class="games-label">Platform</div>
+                  <label for="types6"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types7"
+                    type="checkbox"
+                    name="types"
+                    value="Racing"
+                  />
+
+                  <div class="games-label">Racing</div>
+                  <label for="types7"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types8"
+                    type="checkbox"
+                    name="types"
+                    value="Rhythm"
+                  />
+
+                  <div class="games-label">Rhythm</div>
+                  <label for="types8"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types9"
+                    type="checkbox"
+                    name="types"
+                    value="Role-playing"
+                  />
+
+                  <div class="games-label">Role-playing</div>
+                  <label for="types9"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types10"
+                    type="checkbox"
+                    name="types"
+                    value="RTS"
+                  />
+
+                  <div class="games-label">RTS</div>
+                  <label for="types8"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types8"
+                    type="checkbox"
+                    name="types"
+                    value="Simulation"
+                  />
+
+                  <div class="games-label">Simulation</div>
+                  <label for="types10"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types11"
+                    type="checkbox"
+                    name="types"
+                    value="Sports"
+                  />
+
+                  <div class="games-label">Sports</div>
+                  <label for="types11"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types12"
+                    type="checkbox"
+                    name="types"
+                    value="Survival"
+                  />
+
+                  <div class="games-label">Survival</div>
+                  <label for="types12"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types13"
+                    type="checkbox"
+                    name="types"
+                    value="Tower defense"
+                  />
+
+                  <div class="games-label">Tower defense</div>
+                  <label for="types13"> </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="button-checkbox">
+              <legend class="label-title">Your game(s)</legend>
+              <span class="hint">Which games do you play professionally?</span>
+              <ul role="list" class="">
+                <li>
+                  <input
+                    id="played1"
+                    type="checkbox"
+                    name="played"
+                    value="Call of Duty"
+                  />
+
+                  <div class="games-label">Call of Duty</div>
+                  <label for="played1"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played2"
+                    type="checkbox"
+                    name="played"
+                    value="CS:GO"
+                  />
+
+                  <div class="games-label">CS:GO</div>
+                  <label for="played2"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played3"
+                    type="checkbox"
+                    name="played"
+                    value="Diablo"
+                  />
+
+                  <div class="games-label">Diablo</div>
+                  <label for="played3"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played4"
+                    type="checkbox"
+                    name="played"
+                    value="Dota"
+                  />
+
+                  <div class="games-label">Dota</div>
+                  <label for="played4"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played5"
+                    type="checkbox"
+                    name="played"
+                    value="FIFA"
+                  />
+
+                  <div class="games-label">FIFA</div>
+                  <label for="played5"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played6"
+                    type="checkbox"
+                    name="played"
+                    value="Fortnite"
+                  />
+
+                  <div class="games-label">Fortnite</div>
+                  <label for="played6"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played7"
+                    type="checkbox"
+                    name="played"
+                    value="Guitar Hero"
+                  />
+
+                  <div class="games-label">Guitar Hero</div>
+                  <label for="played7"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played8"
+                    type="checkbox"
+                    name="played"
+                    value="League of Legends"
+                  />
+
+                  <div class="games-label">League of Legends</div>
+                  <label for="played8"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played9"
+                    type="checkbox"
+                    name="played"
+                    value="Left for dead"
+                  />
+
+                  <div class="games-label">Left for dead</div>
+                  <label for="played9"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played10"
+                    type="checkbox"
+                    name="played"
+                    value="Minecraft"
+                  />
+
+                  <div class="games-label">Minecraft</div>
+                  <label for="played10"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played11"
+                    type="checkbox"
+                    name="played"
+                    value="Mortal Combat"
+                  />
+
+                  <div class="games-label">Mortal Combat</div>
+                  <label for="played11"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played12"
+                    type="checkbox"
+                    name="played"
+                    value="Overwatch"
+                  />
+
+                  <div class="games-label">Overwatch</div>
+                  <label for="played12"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played13"
+                    type="checkbox"
+                    name="played"
+                    value="PUBG"
+                  />
+
+                  <div class="games-label">PUBG</div>
+                  <label for="played13"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played14"
+                    type="checkbox"
+                    name="played"
+                    value="Skyrim"
+                  />
+
+                  <div class="games-label">Skyrim</div>
+                  <label for="played14"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played15"
+                    type="checkbox"
+                    name="played"
+                    value="Starcraft"
+                  />
+
+                  <div class="games-label">Starcraft</div>
+                  <label for="played15"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played16"
+                    type="checkbox"
+                    name="played"
+                    value="Super Mario"
+                  />
+
+                  <div class="games-label">Super Mario</div>
+                  <label for="played16"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played17"
+                    type="checkbox"
+                    name="played"
+                    value="Tekken"
+                  />
+
+                  <div class="games-label">Tekken</div>
+                  <label for="played17"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played18"
+                    type="checkbox"
+                    name="played"
+                    value="The Sims"
+                  />
+
+                  <div class="games-label">The Sims</div>
+                  <label for="played18"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played19"
+                    type="checkbox"
+                    name="played"
+                    value="Valorant"
+                  />
+
+                  <div class="games-label">Valorant</div>
+                  <label for="played19"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played20"
+                    type="checkbox"
+                    name="played"
+                    value="Warcraft"
+                  />
+
+                  <div class="games-label">Warcraft</div>
+                  <label for="played20"> </label>
+                </li>
+                <li>
+                  <input
+                    id="played21"
+                    type="checkbox"
+                    name="played"
+                    value="World of Warcraft"
+                  />
+
+                  <div class="games-label">World of Warcraft</div>
+                  <label for="played21"> </label>
+                </li>
+              </ul>
+            </fieldset>
+
             <fieldset class="standard-checkbox">
               <legend class="label-title">What motivates you to play?</legend>
               <span class="hint"
@@ -618,8 +962,6 @@
                     type="checkbox"
                     name="motives"
                     value="It’s fun"
-                    
-                    
                   />
                   <label for="fun"> It’s fun </label>
                 </li>
@@ -629,8 +971,6 @@
                     type="checkbox"
                     name="motives"
                     value="It’s good money"
-                   
-                    
                   />
                   <label for="money"> It’s good money </label>
                 </li>
@@ -640,7 +980,6 @@
                     type="checkbox"
                     name="motives"
                     value="It’s challenging"
-                    
                   />
                   <label for="challenge"> It’s challenging </label>
                 </li>
@@ -650,7 +989,6 @@
                     type="checkbox"
                     name="motives"
                     value="I’m part of a great community"
-                    
                   />
                   <label for="community"> I’m part of a great community </label>
                 </li>
@@ -660,7 +998,6 @@
                     type="checkbox"
                     name="motives"
                     value="It’s what I do best"
-                    
                   />
                   <label for="best"> It’s what I do best </label>
                 </li>
@@ -673,7 +1010,7 @@
           </div>
           <div class="form_group" id="step_3">
             <div class="group_title">It's getting personal</div>
-            <fieldset class="sleep">
+            <fieldset class="sleep radio-field">
               <legend class="label-title">Your sleeping routine</legend>
               <span class="hint"
                 >Your sleep patter has a huge impact on our memory and cognitive
@@ -875,7 +1212,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="lifestyle">
+            <fieldset class="lifestyle radio-field">
               <legend class="label-title">Your lifestyle</legend>
               <span class="hint"
                 >Training requires sitting for long periods of time. Do you
@@ -904,7 +1241,6 @@
                       type="radio"
                       name="lifestyle"
                       value="I do exercise 3 or more days a week."
-                    
                     />
                     <span class="radio-text"
                       >I do exercise 3 or more days a week.</span
@@ -918,7 +1254,6 @@
                       type="radio"
                       name="lifestyle"
                       value="I do some kind of physical activity at least once a week."
-                    
                     />
                     <span class="radio-text"
                       >I do some kind of physical activity at least once a
@@ -933,7 +1268,6 @@
                       type="radio"
                       name="lifestyle"
                       value="I go for a walk once in a while. "
-                  
                     />
                     <span class="radio-text"
                       >I go for a walk once in a while.</span
@@ -947,7 +1281,6 @@
                       type="radio"
                       name="lifestyle"
                       value="Does going to the toilet count?"
-          
                     />
                     <span class="radio-text"
                       >Does going to the toilet count?</span
@@ -1079,7 +1412,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="mindset">
+            <fieldset class="mindset radio-field">
               <legend class="label-title">Your mindset</legend>
               <span class="hint"
                 >Failure is always a possibilty in live. How do you react when
