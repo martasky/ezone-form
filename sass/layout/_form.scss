@@ -445,7 +445,7 @@ input[type="text"],
 }
 
 .cls-1, .cls-3 {
-  stroke: #e3e3e5;
+  stroke: #ffffff;
 }
 
 .cls-1, .cls-2, .cls-3 {
@@ -455,15 +455,18 @@ input[type="text"],
 }
 
 .cls-2 {
-  stroke: #f48d69;
+  stroke: #6259FA;
 }
 
 .cls-3 {
-  fill: #16162a;
+  fill: var(--background-color);
 }
 
 .cls-4 {
   fill: #fff;
+}
+.cls-focused {
+  fill: #6259FA;
 }
 
 
