@@ -12,7 +12,7 @@
     </header>
     <main>
       <section id="value_proposition">
-        <a href="#form"><button>Join our community</button></a>
+        <a href="#form"><button type="button">Join our community</button></a>
         <div class="value_wrapper">
           <div class="value">
             <div class="value_icon">
@@ -549,7 +549,7 @@
               />
             </div>
             <div class="buttons_wrapper">
-              <button class="btn_next">Looks good</button>
+              <button type="button" class="btn_next">Looks good</button>
             </div>
           </div>
           <div class="form_group" id="step_2">
@@ -558,7 +558,7 @@
               <label for="types" class="label-title"
                 >Types of game you’re interested in
               </label>
-              <select id="types" name="types" multiple>
+              <select id="types" name="types" multiple required>
                 <option value="FPS">FPS</option>
                 <option value="MMORPG">MMORPG</option>
                 <option value="Sports">Sports</option>
@@ -582,7 +582,7 @@
                   >Which games do you play professionally?</span
                 >
               </label>
-              <select id="played" name="played" multiple>
+              <select id="played" name="played" multiple required>
                 <option value="CS:GO">CS:GO</option>
                 <option value="Tekken">Tekken</option>
                 <option value="FIFA">FIFA</option>
@@ -618,6 +618,8 @@
                     type="checkbox"
                     name="motives"
                     value="It’s fun"
+                    
+                    
                   />
                   <label for="fun"> It’s fun </label>
                 </li>
@@ -627,6 +629,8 @@
                     type="checkbox"
                     name="motives"
                     value="It’s good money"
+                   
+                    
                   />
                   <label for="money"> It’s good money </label>
                 </li>
@@ -636,6 +640,7 @@
                     type="checkbox"
                     name="motives"
                     value="It’s challenging"
+                    
                   />
                   <label for="challenge"> It’s challenging </label>
                 </li>
@@ -645,6 +650,7 @@
                     type="checkbox"
                     name="motives"
                     value="I’m part of a great community"
+                    
                   />
                   <label for="community"> I’m part of a great community </label>
                 </li>
@@ -654,14 +660,15 @@
                     type="checkbox"
                     name="motives"
                     value="It’s what I do best"
+                    
                   />
                   <label for="best"> It’s what I do best </label>
                 </li>
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back</button>
-              <button class="btn_next">Next</button>
+              <button type="button" class="btn_previous">Go back</button>
+              <button type="button" class="btn_next">Next</button>
             </div>
           </div>
           <div class="form_group" id="step_3">
@@ -681,6 +688,7 @@
                       name="sleep"
                       value="Less than 5 hours"
                       checked
+                      required
                     />
                     <span class="radio-text">Less than 5 hours</span>
                   </label>
@@ -896,7 +904,7 @@
                       type="radio"
                       name="lifestyle"
                       value="I do exercise 3 or more days a week."
-                      checked
+                    
                     />
                     <span class="radio-text"
                       >I do exercise 3 or more days a week.</span
@@ -910,7 +918,7 @@
                       type="radio"
                       name="lifestyle"
                       value="I do some kind of physical activity at least once a week."
-                      checked
+                    
                     />
                     <span class="radio-text"
                       >I do some kind of physical activity at least once a
@@ -925,7 +933,7 @@
                       type="radio"
                       name="lifestyle"
                       value="I go for a walk once in a while. "
-                      checked
+                  
                     />
                     <span class="radio-text"
                       >I go for a walk once in a while.</span
@@ -939,7 +947,7 @@
                       type="radio"
                       name="lifestyle"
                       value="Does going to the toilet count?"
-                      checked
+          
                     />
                     <span class="radio-text"
                       >Does going to the toilet count?</span
@@ -1008,8 +1016,8 @@
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back</button>
-              <button class="btn_next">Next</button>
+              <button type="button" class="btn_previous">Go back</button>
+              <button type="button" class="btn_next">Next</button>
             </div>
           </div>
           <div class="form_group" id="step_4">
@@ -1253,7 +1261,7 @@
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back</button>
+              <button type="button" class="btn_previous">Go back</button>
               <button id="submit-form" type="submit" class="btn_next">
                 I'm ready to join
               </button>

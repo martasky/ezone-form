@@ -93,25 +93,18 @@ function getSelectValue() {
   );
   return { games: selectedGames, types: selectedTypes };
 }
-import { nextStep, previousStep } from "./steps";
+
+
+import { previousStep, validateSteps } from "./steps";
+
 
 //event listeners to advance
 document.querySelectorAll(".btn_next").forEach((button) => {
   button.addEventListener("click", () => {
     console.log("NEXT");
-    //check if imnputs are valid
+    //check if inputs are valid
     let currentStep = document.querySelector(".visible").id;
-
-    if (
-      document.querySelectorAll(`#${currentStep} input`).forEach((input) => {
-        input.value;
-      }) != ""
-    ) {
-      console.log("validates");
-      nextStep(currentStep);
-    } else {
-      console.log("doesnt validate");
-    }
+    validateSteps(currentStep)
   });
 });
 
