@@ -41,13 +41,13 @@ export function previousStep(currentStep) {
   stepBackward(currentStep);
 }
 
-export function validateSteps(currentStep) {
+export function validateSteps(currentStep, action) {
   if (currentStep === "step_1") {
     if (document.querySelector("#name").reportValidity()) {
       if (document.querySelector("#email").reportValidity()) {
         if (document.querySelector("#gamertag").reportValidity()) {
           if (document.querySelector("#password").reportValidity()) {
-            nextStep(currentStep);
+            nextStep(currentStep);        
           }
         }
       }

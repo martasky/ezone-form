@@ -113,68 +113,6 @@ option:checked {
   margin: 2rem 1rem 1rem 1rem;
 }
 
-@media screen and (min-width: 500px) {
-  form {
-    margin: 0 2rem;
-  }
-  #form_wrapper h1,
-  #form_wrapper p {
-    margin: 0 2rem;
-  }
-
-  #form_wrapper h1 {
-    font-size: 2.5rem;
-  }
-  #form_wrapper h1 span {
-    margin-top: -10px;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  form {
-    margin: 0 15vw;
-    padding: 2vh 0 5vh 0;
-  }
-
-  .progress_bar {
-    margin: 2vh 15vw 0 15vw;
-  }
-
-  #form_wrapper h1,
-  #form_wrapper p {
-    margin: 0 15vw;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  #form_wrapper h1 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  form,
-  #form_wrapper h1,
-  #form_wrapper p {
-    margin: 0 18vw;
-  }
-
-  .progress_bar {
-    margin: 4vh 18vw 0 18vw;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  form,
-  #form_wrapper h1,
-  #form_wrapper p {
-    margin: 0 25vw;
-  }
-
-  .progress_bar {
-    margin: 4vh 25vw 0 25vw;
-  }
-}
 //Title section, labels, legend and hint text; Valid/invalid/focus
 
 .group_title {
@@ -200,7 +138,7 @@ option:checked {
   flex-direction: column;
   justify-content: space-around;
   gap: 0.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 // input text
 
@@ -468,3 +406,70 @@ input[type="text"],
 
 
 
+///Media queries have been moved down 
+
+@media screen and (min-width: 500px) {
+  form {
+    margin: 0 2rem;
+  }
+  #form_wrapper h1,
+  #form_wrapper p {
+    margin: 0 2rem;
+  }
+
+  #form_wrapper h1 {
+    font-size: 2.5rem;
+  }
+  #form_wrapper h1 span {
+    margin-top: -10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  form {
+    margin: 0 15vw;
+    padding: 2vh 0 5vh 0;
+  }
+
+  .progress_bar {
+    margin: 2vh 15vw 0 15vw;
+  }
+
+  #form_wrapper h1,
+  #form_wrapper p {
+    margin: 0 15vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #form_wrapper h1 {
+    font-size: 3rem;
+  }
+  .input_group{
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  form,
+  #form_wrapper h1,
+  #form_wrapper p {
+    margin: 0 18vw;
+  }
+
+  .progress_bar {
+    margin: 4vh 18vw 0 18vw;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  form,
+  #form_wrapper h1,
+  #form_wrapper p {
+    margin: 0 25vw;
+  }
+
+  .progress_bar {
+    margin: 4vh 25vw 0 25vw;
+  }
+}

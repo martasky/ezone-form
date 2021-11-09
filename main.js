@@ -104,9 +104,19 @@ document.querySelectorAll(".btn_next").forEach((button) => {
     console.log("NEXT");
     //check if inputs are valid
     let currentStep = document.querySelector(".visible").id;
+    let action = button.className
     validateSteps(currentStep)
   });
 });
+
+//event listeners for stepbar
+document.querySelectorAll("svg circle").forEach((circle) => {
+  circle.addEventListener("click", () =>{
+    let clickedCircle = circle.id
+    console.log(clickedCircle)
+  })
+})
+
 
 //event listeners to go back
 
@@ -117,3 +127,5 @@ document.querySelectorAll(".btn_previous").forEach((button) => {
     previousStep(currentStep);
   });
 });
+
+
