@@ -1,4 +1,4 @@
-import { stepForward, stepBackward } from "./progress";
+import { stepForward, stepBackward, changeStep } from "./progress";
 
 const step1 = document.querySelector("#step_1");
 const step2 = document.querySelector("#step_2");
@@ -98,3 +98,14 @@ export function validateSteps(currentStep, action) {
       
   } */
 }
+
+
+export function stepBar(circleClicked, visibleStep) {
+let nextDestination = circleClicked.slice(7);
+let currentPage = visibleStep.slice(5);
+document.querySelector(`#${visibleStep}`).classList.remove("visible");
+document.querySelector(`#step_${nextDestination}`).classList.add("visible");
+changeStep(currentPage, nextDestination)
+
+}
+

@@ -41,16 +41,16 @@ button {
   border: solid 2px var(--light-purple);
   background: transparent;
   border-radius: 33px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   font-family: var(--primary-font);
   text-transform: uppercase;
   color: var(--unfocused-field);
+  margin-right: 1rem;
 }
 
 .btn_previous::before {
   content: url(/assets/arrows/arrow-back.svg);
   transform-origin: bottom;
-
   width: 20px;
   height: 10px;
   float: left;

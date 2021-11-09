@@ -95,7 +95,7 @@ function getSelectValue() {
 }
 
 
-import { previousStep, validateSteps } from "./steps";
+import { previousStep, validateSteps, stepBar } from "./steps";
 
 
 //event listeners to advance
@@ -112,8 +112,9 @@ document.querySelectorAll(".btn_next").forEach((button) => {
 //event listeners for stepbar
 document.querySelectorAll("svg circle").forEach((circle) => {
   circle.addEventListener("click", () =>{
+    let currentStep = document.querySelector(".visible").id;
     let clickedCircle = circle.id
-    console.log(clickedCircle)
+    stepBar(clickedCircle, currentStep);
   })
 })
 
@@ -127,5 +128,4 @@ document.querySelectorAll(".btn_previous").forEach((button) => {
     previousStep(currentStep);
   });
 });
-
 
