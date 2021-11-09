@@ -53,7 +53,7 @@ pointer-events: all;
 #form_wrapper h1 {
   margin: 0 1.5rem;
   padding: 2rem;
-  color: var(--main-typography-color);
+  color: var(--light-purple);
   font-family: var(--secondary-font);
   text-align: center;
   font-size: 2rem;
@@ -62,12 +62,12 @@ pointer-events: all;
 
 #form_wrapper h1 span {
   display: block;
-  -webkit-text-stroke: 1px var(--main-typography-color);
+  -webkit-text-stroke: 1px var(--light-purple);
   -webkit-text-fill-color: transparent;
 }
 
 #form_wrapper p {
-  color: var(--main-typography-color);
+  color: var(--light-purple);
   font-family: var(--primary-font);
   margin: 0 1.5rem;
   font-size: 1.3rem;
@@ -100,11 +100,13 @@ select {
 
 option {
   margin-left: 1vw;
+  font-size: 0.9rem;
 }
 option:checked {
   color: var(--focused-field);
   background-color: var(--background-color);
   font-weight: 700;
+
 }
 
 .progress_bar {
@@ -183,11 +185,13 @@ option:checked {
 
 .label-title {
   font-family: var(--secondary-font);
+  font-size: 1rem;
+  color: var(--light-purple)
 }
 
 .hint {
   font-family: var(--primary-font);
-  color: #f8ddce;
+  color: white;
   font-size: 0.8rem;
 }
 
@@ -202,10 +206,10 @@ option:checked {
 
 .input_group input {
   background-color: var(--background-color);
-  border-bottom: 2px solid var(--unfocused-field);
+  border-bottom: 1px solid white;
   height: 50px;
   color: var(--unfocused-field);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .form_group:first-of-type input {
   padding-left: 3rem;
@@ -276,6 +280,7 @@ option:checked {
 .standard-checkbox label {
   color: var(--unfocused-field);
   grid-area: 1/1;
+  font-size: 0.9rem;
 }
 
 // Checkboxes with images
@@ -293,6 +298,7 @@ option:checked {
   row-gap: 2rem;
   width: 70%;
   margin-top: 2rem;
+  
 }
 
 .image-checkbox ul li {
@@ -326,7 +332,6 @@ option:checked {
 }
 .image-checkbox input:checked ~ label::after {
   content: "";
-
   position: absolute;
   top: 0;
   left: 0;
@@ -334,8 +339,8 @@ option:checked {
   height: 100%;
   z-index: 2;
   border-radius: 10px;
-  background-color: var(--unfocused-field);
-  border: 2px solid var(--unfocused-field);
+  background-color: white;
+  border: 2px solid white;
 }
 .image-checkbox .nutrition-label,
 .image-checkbox .improve-label {
@@ -362,6 +367,8 @@ input[type="radio"] {
   margin-right:1vw;
 
 }
+
+
 input[type="radio"]:checked {
   background-image: url(/assets/radio-check/radio-button-checked.svg);
   background-size: cover;
@@ -370,8 +377,12 @@ input[type="radio"]:checked {
   color: var(--focused-field);
 }
 
+.radio-text {
+  font-size: 0.9rem;
+}
 input[type="radio"]:checked + .radio-text {
-  color: var(--focused-field)
+  font-weight: 700;
+ 
 }
 
 
@@ -381,7 +392,6 @@ input[type="radio"]:checked + .radio-text {
   flex-direction: row;
   align-items: center;
   margin: 1vh 0 ;
-  color: var(--unfocused-field)
 }
 
 
@@ -410,25 +420,12 @@ input[type="text"],
       background-image:none
     }
     &:focus{
-      border-bottom: solid 2px var(--focused-field);
+      border: solid 1px white;
+      border-radius: 13px;
     }
   }
 
  
-  
-  .input_group, 
-  span .hint,
-  label[for="name"],
-  label[for="email"],
-  label[for="gamertag"],
-  label[for="password"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"]{
-    &:focus-within{
-      color: var(--focused-field)
-    }
-  }
 
   input[id="types-game"],
   input[id="games-played"]{

@@ -19,23 +19,21 @@ export function stepForward(currentStep){
 
     if (currentStep === "step_1"){
         progressLine.x2.baseVal.value = stepTwoValue;
-        circle1.classList.add("cls-2");
-        circle1.classList.add("cls-focused");
+        circle1.classList.toggle("cls-focused");
+        circle2.classList.add("cls-2");
+        circle2.classList.toggle("cls-focused");
     } else if(currentStep === "step_2"){
         progressLine.x2.baseVal.value = stepThreeValue;
-        circle2.classList.add("cls-2");
-        circle2.classList.add("cls-focused");
-        circle1.classList.remove("cls-focused");
+        circle3.classList.add("cls-2");
+        circle2.classList.toggle("cls-focused");
+        circle3.classList.toggle("cls-focused");       
     } else if(currentStep ==="step_3"){
         progressLine.x2.baseVal.value = stepFourValue;
-        circle3.classList.add("cls-2");
-        circle3.classList.add("cls-focused");
-        circle2.classList.remove("cls-focused");
+        circle4.classList.add("cls-2");
+        circle3.classList.toggle("cls-focused");
+        circle4.classList.toggle("cls-focused"); 
     }else if (currentStep ==="step_4"){
         console.log("Gracias!");
-        circle4.classList.add("cls-2");
-        circle4.classList.add("cls-focused");
-        circle3.classList.remove("cls-focused");
     }
 
 }
@@ -44,13 +42,19 @@ export function stepBackward(currentStep){
 
     if (currentStep === "step_2"){
         progressLine.x2.baseVal.value = stepOneValue;
-        circle1.classList.remove("cls-2")
+        circle2.classList.remove("cls-2");
+        circle1.classList.toggle("cls-focused");
+        circle2.classList.toggle("cls-focused");
     } else if(currentStep === "step_3"){
         progressLine.x2.baseVal.value = stepTwoValue;
-        circle2.classList.remove("cls-2")
+        circle3.classList.remove("cls-2");
+        circle2.classList.toggle("cls-focused"); 
+        circle3.classList.toggle("cls-focused"); 
     } else if(currentStep ==="step_4"){
         progressLine.x2.baseVal.value = stepThreeValue;
-        circle3.classList.remove("cls-2")
+        circle4.classList.remove("cls-2");
+        circle3.classList.toggle("cls-focused");  
+        circle4.classList.toggle("cls-focused"); 
     }
 
 }
