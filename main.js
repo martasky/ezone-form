@@ -34,7 +34,7 @@ form.addEventListener("submit", (e) => {
       post(data);
     }
   } else {
-    form.reportValidity();
+    //form.reportValidity();
   }
 });
 

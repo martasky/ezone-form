@@ -57,28 +57,16 @@ export function validateSteps(currentStep) {
   } else if (currentStep === "step_2") {
     if (document.querySelector("#types").reportValidity()) {
       if (document.querySelector("#played").reportValidity()) {
-        const checkedMotives = [];
-        document.querySelectorAll(`input[name="motives"]`).forEach((input) => {
-          if (input.checked) {
-            checkedMotives.push(input.id);
-          }
-        });
-        if (checkedMotives.length > 0) {
-          nextStep(currentStep);
-        } else {
-          let motivesFirst = document.querySelector("#fun");
-          motivesFirst.setCustomValidity("Please, select at least one option");
-        }
+          nextStep(currentStep);        
       }
-    } else {
-      document.querySelector(`#${currentStep} .btn_next`).classList.add("dissabled");
-    }
-  } else if (currentStep === "step_3") {
+    } 
+  } else if(currentStep === "step_3") {
+    nextStep(currentStep); 
+  }
+  /* else if (currentStep === "step_3") {
 
     const nutritionChecklist = [];
     const symptomsChecklist = [];
-
-
 
     //loop through the nutritioncheckboxes and see if there is any checked
     document.querySelectorAll(`input[name="nutrition"]`).forEach((input) => {
@@ -99,7 +87,7 @@ export function validateSteps(currentStep) {
             nextStep(currentStep);
       } else {
         console.log("choose a synthom");
-        document.querySelector("#lifestyle1").setCustomValidity("Please, select at least one option");
+        document.querySelector("#symptoms1").setCustomValidity("Please, select at least one option");
       }
     } else {
     console.log("choose a nutrition");
@@ -108,5 +96,5 @@ export function validateSteps(currentStep) {
       }
   } else if (currentStep === "step_4") {
       
-  }
+  } */
 }
