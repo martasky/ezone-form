@@ -1,7 +1,6 @@
 @use "../components/buttons";
 @use "../base/typography";
 form {
-  color: var(--main-typography-color);
   font-family: var(--primary-font);
   font-size: 1.2rem;
   margin: 0 1.5rem;
@@ -70,7 +69,6 @@ pointer-events: all;
   color: var(--light-purple);
   font-family: var(--primary-font);
   margin: 0 1.5rem;
-  font-size: 1.3rem;
 }
 
 #form_wrapper p:nth-of-type(2) {
@@ -118,6 +116,7 @@ option:checked {
 .group_title {
   font-family: var(--secondary-font);
   font-size: 1.3rem;
+  color: var(--light-purple);
   margin-bottom: 3rem;
 }
 
