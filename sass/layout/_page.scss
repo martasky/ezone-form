@@ -44,3 +44,37 @@ footer img {
   color: white;
   font-family: var(--primary-font);
 }
+
+@media screen and (max-width: 900px) {
+  .value_description {
+    font-size: 0.7rem;
+  }
+  .value_wrapper {
+    padding: 1rem;
+    padding-top: 3rem;
+    gap: 2rem;
+  }
+  .value_icon img {
+    width: 50%;
+    padding-bottom: 1rem;
+  }
+  .value {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 702px) and (max-width: 900px) {
+  .value_description {
+    font-size: 0.9rem;
+  }
+  .value_wrapper {
+    padding: 1rem;
+    padding-top: 3rem;
+    gap: 2rem;
+  }
+  .value_icon img {
+    width: 40%;
+  }
+  .value {
+    width: 80%;
+  }
+}

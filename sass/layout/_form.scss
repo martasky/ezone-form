@@ -119,6 +119,7 @@ option:checked {
   font-size: 1.3rem;
   color: var(--light-purple);
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .label-title {
@@ -366,7 +367,9 @@ option:checked {
   font-family: var(--primary-font);
   font-weight: bold;
 }
-
+.button-checkbox .hint {
+  margin-top: 0.5rem;
+}
 //radio buttons
 
 input[type="radio"] {
@@ -482,7 +485,16 @@ input[id="games-played"] {
 }
 
 ///Media queries have been moved down
-
+@media screen and (max-width: 950px) {
+  .image-checkbox ul {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 951px) and (max-width: 1100px) {
+  .image-checkbox ul {
+    width: 80%;
+  }
+}
 @media screen and (min-width: 500px) {
   form {
     margin: 0 2rem;
