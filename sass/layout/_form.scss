@@ -53,7 +53,7 @@ pointer-events: all;
 #form_wrapper h1 {
   margin: 0 1.5rem;
   padding: 2rem;
-  color: var(--light-purple);
+  color: var(--labels-titles-button);
   font-family: var(--secondary-font);
   text-align: center;
   font-size: 2rem;
@@ -62,7 +62,7 @@ pointer-events: all;
 
 #form_wrapper h1 span {
   display: block;
-  -webkit-text-stroke: 1px var(--light-purple);
+  -webkit-text-stroke: 1px var(--labels-titles-button);
   -webkit-text-fill-color: transparent;
 }
 
@@ -110,21 +110,27 @@ option:checked {
 
 .progress_bar {
   margin: 2rem 1rem 1rem 1rem;
+  position: -webkit-sticky;
+  position:sticky;
+  top: 0vh;
+  background-color: var(--background-color);
+  z-index: 9;
 }
+
 
 //Title section, labels, legend and hint text; Valid/invalid/focus
 
 .group_title {
   font-family: var(--secondary-font);
   font-size: 1.3rem;
-  color: var(--light-purple);
+  color: var(--labels-titles-button);
   margin-bottom: 3rem;
 }
 
 .label-title {
   font-family: var(--secondary-font);
   font-size: 1rem;
-  color: var(--light-purple)
+  color: var(--labels-titles-button)
 }
 
 .hint {
@@ -420,6 +426,7 @@ input[type="text"],
 
   #form_wrapper h1 {
     font-size: 2.5rem;
+
   }
   #form_wrapper h1 span {
     margin-top: -10px;
@@ -434,6 +441,7 @@ input[type="text"],
 
   .progress_bar {
     margin: 2vh 15vw 0 15vw;
+   
   }
 
   #form_wrapper h1,
