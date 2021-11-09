@@ -18,6 +18,34 @@ button {
   position: sticky;
   top: 15vh;
 }
+.move-cta {
+  padding: 1rem;
+  /*  position: -webkit-sticky;
+  position: sticky;
+  top: 90vh;
+  left: 44%; */
+  left: 50%;
+}
+.move-filter {
+  padding: 1rem;
+  width: 150px;
+  /*  position: -webkit-sticky;
+  position: sticky;
+  top: 90vh;
+  left: 35vw; */
+}
+.sticky-wrap {
+  display: flex;
+  flex-direction: row;
+
+  gap: 3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 68vh;
+  justify-content: center;
+  padding-top: 10rem;
+  margin-bottom: 10rem;
+}
 
 .btn_next {
   border: solid 2px var(--labels-titles-button);
@@ -56,4 +84,15 @@ button {
   height: 10px;
   float: left;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 1600px) {
+  .sticky-wrap {
+    top: 75vh;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sticky-wrap {
+    gap: 1rem;
+  }
 }
