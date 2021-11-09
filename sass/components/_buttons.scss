@@ -13,9 +13,9 @@ button {
 }
 
 .cta {
-  padding:1rem;
+  padding: 1rem;
   position: -webkit-sticky;
-  position:sticky;
+  position: sticky;
   top: 15vh;
 }
 
@@ -38,8 +38,6 @@ button {
   transition: 0.3 ease-out;
 }
 
-
-
 .btn_previous {
   border: solid 2px var(--light-purple);
   background: transparent;
@@ -59,4 +57,3 @@ button {
   float: left;
   margin-right: 10px;
 }
-
