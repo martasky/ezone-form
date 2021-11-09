@@ -12,6 +12,9 @@ header img,
 footer img {
   object-fit: cover;
 }
+.background img {
+  margin-top: -20rem;
+}
 #value_proposition {
   background-color: var(--background-color);
   display: grid;
