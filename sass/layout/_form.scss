@@ -227,6 +227,7 @@ option:checked {
   font-weight: bold;
 }
 
+
 .standard-checkbox input[type="checkbox"]:checked + label {
   color: var(--focused-field);
   font-weight: bold;
@@ -282,6 +283,10 @@ option:checked {
 
   border: 2px solid white;
   z-index: 1;
+}
+
+.image-checkbox input:focus ~ label::before{
+  background: rgba(255, 255, 255, 0.274);
 }
 .image-checkbox input:checked ~ label::after {
   content: "";
@@ -345,10 +350,16 @@ option:checked {
   height: 100%;
   /* background: var(--bg, #fff); */
   border-radius: 30px;
-
   border: 2px solid white;
   z-index: 1;
 }
+
+.button-checkbox input:focus ~ label::before{
+  background: rgba(255, 255, 255, 0.274)
+}
+
+//add change on focus 
+
 .button-checkbox input:checked ~ label::after {
   content: "";
   position: absolute;
@@ -382,10 +393,16 @@ option:checked {
 input[type="radio"] {
   height: 1.4rem;
   width: 1.4rem;
-  background-image: url(/assets/radio-check/radio-button.svg);
+  background-image: url("/assets/radio-check/radio-button.svg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 15px;
+}
+
+
+input[type="radio"]:focus + .radio-text {
+  font-weight: 700;
+  color: var(--focused-field)
 }
 
 input[type="radio"]:checked {
