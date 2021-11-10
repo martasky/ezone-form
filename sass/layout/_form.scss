@@ -126,6 +126,12 @@ option:checked {
   z-index: 9;
 }
 
+.go-away{
+  display:none
+}
+
+
+
 //Title section, labels, legend and hint text; Valid/invalid/focus
 
 .group_title {
@@ -519,9 +525,10 @@ circle{
 
 ///Thank you page
 
-#step_5{
+#step_5 .visible{
   margin:0 -1.5rem;
   display:grid;
+ 
 }
 
 #step_5 button{
