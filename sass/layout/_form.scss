@@ -14,16 +14,16 @@ form {
 }
 
 .form_group {
-  background-color: var(--background-color);
-  opacity: 0;
-  pointer-events: none;
   display: none;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .visible {
   display: block;
   pointer-events: all;
   animation: visible 0.7s ease-in-out 1 forwards;
+  background-color: var(--background-color);
 }
 
 @keyframes visible {
@@ -35,10 +35,14 @@ form {
 #step_1,
 #step_2,
 #step_3,
-#step_4 {
+#step_4,
+#step_5 {
   grid-area: 1/1;
 }
-
+#step_5 {
+  order: -5;
+  display: none;
+}
 #step_4 {
   order: -4;
 }
@@ -116,6 +120,10 @@ option:checked {
   top: 0vh;
   background-color: var(--background-color);
   z-index: 9;
+}
+
+.go-away {
+  display: none;
 }
 
 //Title section, labels, legend and hint text; Valid/invalid/focus
@@ -522,7 +530,7 @@ circle {
 
 ///Thank you page
 
-#step_5 {
+#step_5 .visible {
   margin: 0 -1.5rem;
   display: grid;
 }
@@ -551,6 +559,12 @@ circle {
 .img-container img:hover {
   filter: brightness(0.4);
   transform: scale(1.1);
+}
+
+.required {
+  font-size: 0.7rem;
+  color: var(--light-purple);
+  margin: 0;
 }
 
 ///Media queries have been moved down
