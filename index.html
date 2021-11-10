@@ -52,16 +52,18 @@
       <a name="form"></a>
       <section id="form_wrapper">
         <div id="form_intro">
-        <h1>Boost your <span>performance</span></h1>
-        <p>
-          Set up your Ezone account and get <strong>unlimited access </strong>to
-          <strong>state of the art advice</strong> to improve your game
-          performance.
-        </p>
-        <p>
-          You are a <strong>unique esports athelete</strong>. Help us tailor our
-          knowledge to your needs by filling the form.
-        </p></div>
+          <h1>Boost your <span>performance</span></h1>
+          <p>
+            Set up your Ezone account and get
+            <strong>unlimited access </strong>to
+            <strong>state of the art advice</strong> to improve your game
+            performance.
+          </p>
+          <p>
+            You are a <strong>unique esports athelete</strong>. Help us tailor
+            our knowledge to your needs by filling the form.
+          </p>
+        </div>
         <div class="progress_bar">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8460.36 1348.9">
             <g id="Layer_10" data-name="Layer 10">
@@ -486,7 +488,7 @@
 
             <div class="input_group">
               <label for="name" class="label-title">Name</label>
-              <span class="hint">Add your full name</span>
+              <span class="hint">Add your full name.</span>
               <img
                 class="user icon"
                 src="assets/placeholder-icons/name-icon.svg"
@@ -520,8 +522,7 @@
             <div class="input_group">
               <label for="gamertag" class="label-title">Gamertag</label>
               <span class="hint"
-                >It’ll help other members to identify you in the
-                community.</span
+                >It’ll help other members to identify you in the.</span
               >
               <img
                 class="email icon"
@@ -555,8 +556,12 @@
                 required
               />
             </div>
-            <div class="buttons_wrapper">             
-              <button class="btn_next">Next<span class="button_arrow button_arrow_next"><img src="/assets/arrows/arrow-next.svg" alt="next"></span></button>
+            <div class="buttons_wrapper">
+              <button class="btn_next">
+                Next<span class="button_arrow button_arrow_next"
+                  ><img src="/assets/arrows/arrow-next.svg" alt="next"
+                /></span>
+              </button>
             </div>
           </div>
           <div class="form_group" id="step_2">
@@ -565,7 +570,7 @@
               <legend class="label-title">
                 Types of game you’re interested in
               </legend>
-              <span class="hint">Choose your favourite types</span>
+              <span class="hint">Choose your favourite types.</span>
               <ul role="list" class="">
                 <li>
                   <input
@@ -670,17 +675,6 @@
                   />
 
                   <div class="games-label">RTS</div>
-                  <label for="types8"> </label>
-                </li>
-                <li>
-                  <input
-                    id="types8"
-                    type="checkbox"
-                    name="types"
-                    value="Simulation"
-                  />
-
-                  <div class="games-label">Simulation</div>
                   <label for="types10"> </label>
                 </li>
                 <li>
@@ -688,10 +682,10 @@
                     id="types11"
                     type="checkbox"
                     name="types"
-                    value="Sports"
+                    value="Simulation"
                   />
 
-                  <div class="games-label">Sports</div>
+                  <div class="games-label">Simulation</div>
                   <label for="types11"> </label>
                 </li>
                 <li>
@@ -699,10 +693,10 @@
                     id="types12"
                     type="checkbox"
                     name="types"
-                    value="Survival"
+                    value="Sports"
                   />
 
-                  <div class="games-label">Survival</div>
+                  <div class="games-label">Sports</div>
                   <label for="types12"> </label>
                 </li>
                 <li>
@@ -710,18 +704,29 @@
                     id="types13"
                     type="checkbox"
                     name="types"
+                    value="Survival"
+                  />
+
+                  <div class="games-label">Survival</div>
+                  <label for="types13"> </label>
+                </li>
+                <li>
+                  <input
+                    id="types14"
+                    type="checkbox"
+                    name="types"
                     value="Tower defense"
                   />
 
                   <div class="games-label">Tower defense</div>
-                  <label for="types13"> </label>
+                  <label for="types14"> </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="button-checkbox">
               <legend class="label-title">Your game(s)</legend>
-              <span class="hint">Which games do you play professionally?</span>
+              <span class="hint">Which games do you play?</span>
               <ul role="list" class="">
                 <li>
                   <input
@@ -1008,11 +1013,28 @@
                   />
                   <label for="best"> It’s what I do best </label>
                 </li>
+                <li>
+                  <input
+                    id="neutral"
+                    type="checkbox"
+                    name="motives"
+                    value="I never thought about it"
+                  />
+                  <label for="neutral"> I never thought about it </label>
+                </li>
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back<span class="button_arrow button_arrow_back"><img src="/assets/arrows/arrow-back.svg" alt="back"></span></button>
-              <button class="btn_next">Next<span class="button_arrow button_arrow_next"><img src="/assets/arrows/arrow-next.svg" alt="next"></span></button>
+              <button class="btn_previous">
+                Go back<span class="button_arrow button_arrow_back"
+                  ><img src="/assets/arrows/arrow-back.svg" alt="back"
+                /></span>
+              </button>
+              <button class="btn_next">
+                Next<span class="button_arrow button_arrow_next"
+                  ><img src="/assets/arrows/arrow-next.svg" alt="next"
+                /></span>
+              </button>
             </div>
           </div>
           <div class="form_group" id="step_3">
@@ -1020,51 +1042,62 @@
             <fieldset class="sleep radio-field">
               <legend class="label-title">Your sleeping routine</legend>
               <span class="hint"
-                >Your sleep patter has a huge impact on our memory and cognitive
-                habilities. <br />How much do you sleep?</span
+                >Your sleep pattern has a huge impact on your memory and
+                cognitive habilities. How much do you sleep?</span
               >
               <ul role="list" class="radio-boxes">
                 <li>
+                  <input
+                    id="sleep1"
+                    type="radio"
+                    name="sleep"
+                    value="Less than 5 hours"
+                  />
                   <label for="sleep1">
-                    <input
-                      id="sleep1"
-                      type="radio"
-                      name="sleep"
-                      value="Less than 5 hours"            
-                    />
                     <span class="radio-text">Less than 5 hours</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="sleep2"
+                    type="radio"
+                    name="sleep"
+                    value="Between 5 and 6 hours"
+                  />
                   <label for="sleep2">
-                    <input
-                      id="sleep2"
-                      type="radio"
-                      name="sleep"
-                      value="Between 5 and 6 hours"
-                    />
                     <span class="radio-text">Between 5 and 6 hours</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="sleep3"
+                    type="radio"
+                    name="sleep"
+                    value="Between 6 and 7 hours"
+                  />
                   <label for="sleep3">
-                    <input
-                      id="sleep3"
-                      type="radio"
-                      name="sleep"
-                      value="Between 6 and 7 hours"
-                    />
                     <span class="radio-text">Between 6 and 7 hours</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="sleep4"
+                    type="radio"
+                    name="sleep"
+                    value="Between 7 and 8"
+                  />
                   <label for="sleep4">
-                    <input
-                      id="sleep4"
-                      type="radio"
-                      name="sleep"
-                      value="8 or more hours"
-                    />
+                    <span class="radio-text">Between 7 and 8</span>
+                  </label>
+                </li>
+                <li>
+                  <input
+                    id="sleep5"
+                    type="radio"
+                    name="sleep"
+                    value="8 or more hours"
+                  />
+                  <label for="sleep5">
                     <span class="radio-text">8 or more hours</span>
                   </label>
                 </li>
@@ -1074,7 +1107,7 @@
             <fieldset class="nutrition image-checkbox">
               <legend class="label-title">Your nutrition</legend>
               <span class="hint"
-                >The diet can also affect our performance, especially if the
+                >Your diet can also affect your performance, especially if the
                 sugar level is too high. Which of the following products do you
                 take often?</span
               >
@@ -1226,70 +1259,58 @@
               >
               <ul role="list" class="radio-boxes">
                 <li>
-                  <label for="lifestyle1">
-                    <input
-                      id="lifestyle1"
-                      type="radio"
-                      name="lifestyle"
-                      value="I try to exercise for at least 30 mins every day."
-                     
-                    />
-                    <span class="radio-text"
-                      >I try to exercise for at least 30 mins every day.</span
-                    >
+                  <input
+                    id="lifestyle1"
+                    type="radio"
+                    name="lifestyle"
+                    value="I try to exercise for at least 30 mins every day."
+                  />
+                  <label for="lifestyle1" class="radio-text">
+                    I try to exercise for at least 30 mins every day
                   </label>
                 </li>
                 <li>
-                  <label for="lifestyle2">
-                    <input
-                      id="lifestyle2"
-                      type="radio"
-                      name="lifestyle"
-                      value="I do exercise 3 or more days a week."
-                    />
-                    <span class="radio-text"
-                      >I do exercise 3 or more days a week.</span
-                    >
+                  <input
+                    id="lifestyle2"
+                    type="radio"
+                    name="lifestyle"
+                    value="I do exercise 3 or more days a week."
+                  />
+                  <label for="lifestyle2" class="radio-text">
+                    I do exercise 3 or more days a week
                   </label>
                 </li>
                 <li>
-                  <label for="lifestyle3">
-                    <input
-                      id="lifestyle3"
-                      type="radio"
-                      name="lifestyle"
-                      value="I do some kind of physical activity at least once a week."
-                    />
-                    <span class="radio-text"
-                      >I do some kind of physical activity at least once a
-                      week.</span
-                    >
+                  <input
+                    id="lifestyle3"
+                    type="radio"
+                    name="lifestyle"
+                    value="I do some kind of physical activity at least once a week."
+                  />
+                  <label for="lifestyle3" class="radio-text">
+                    I do some kind of physical activity at least once a week
                   </label>
                 </li>
                 <li>
-                  <label for="lifestyle4">
-                    <input
-                      id="lifestyle4"
-                      type="radio"
-                      name="lifestyle"
-                      value="I go for a walk once in a while. "
-                    />
-                    <span class="radio-text"
-                      >I go for a walk once in a while.</span
-                    >
+                  <input
+                    id="lifestyle4"
+                    type="radio"
+                    name="lifestyle"
+                    value="I go for a walk once in a while. "
+                  />
+                  <label for="lifestyle4" class="radio-text">
+                    I go for a walk once in a while
                   </label>
                 </li>
                 <li>
-                  <label for="lifestyle5">
-                    <input
-                      id="lifestyle5"
-                      type="radio"
-                      name="lifestyle"
-                      value="Does going to the toilet count?"
-                    />
-                    <span class="radio-text"
-                      >Does going to the toilet count?</span
-                    >
+                  <input
+                    id="lifestyle5"
+                    type="radio"
+                    name="lifestyle"
+                    value="Does going to the toilet count?"
+                  />
+                  <label for="lifestyle5" class="radio-text">
+                    I usually don't excercise
                   </label>
                 </li>
               </ul>
@@ -1354,8 +1375,16 @@
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back<span class="button_arrow button_arrow_back"><img src="/assets/arrows/arrow-back.svg" alt="back"></span></button>
-              <button class="btn_next">Next<span class="button_arrow button_arrow_next"><img src="/assets/arrows/arrow-next.svg" alt="next"></span></button>
+              <button class="btn_previous">
+                Go back<span class="button_arrow button_arrow_back"
+                  ><img src="/assets/arrows/arrow-back.svg" alt="back"
+                /></span>
+              </button>
+              <button class="btn_next">
+                Next<span class="button_arrow button_arrow_next"
+                  ><img src="/assets/arrows/arrow-next.svg" alt="next"
+                /></span>
+              </button>
             </div>
           </div>
           <div class="form_group" id="step_4">
@@ -1363,10 +1392,10 @@
               Let's bring your game to the next level
             </div>
             <fieldset class="stress standard-checkbox">
-              <legend class="label-title">Handleing stress</legend>
+              <legend class="label-title">Handling stress</legend>
               <span class="hint"
                 >Being an esport athlete, you are constantly in a combat mode.
-                Are you affected by any of these?.</span
+                Have you ever experienced...?</span
               >
               <ul role="list" class="">
                 <li>
@@ -1415,69 +1444,77 @@
                   />
                   <label for="stress5"> Lack of sexual impulse </label>
                 </li>
+                <li>
+                  <input
+                    id="stress6"
+                    type="checkbox"
+                    name="stress"
+                    value="I'm fine"
+                  />
+                  <label for="stress6">No, I'm fine </label>
+                </li>
               </ul>
             </fieldset>
             <fieldset class="mindset radio-field">
-              <legend class="label-title">Your mindset</legend>
+              <legend class="label-title">Your state of mind</legend>
               <span class="hint"
-                >Failure is always a possibilty in live. How do you react when
+                >Failure is always a possibilty in life. How do you react when
                 you lose a game?</span
               >
               <ul role="list" class="radio-boxes">
                 <li>
+                  <input
+                    id="mindset1"
+                    type="radio"
+                    name="mindset"
+                    value="I’m angry with myself"
+                  />
                   <label for="mindset1">
-                    <input
-                      id="mindset1"
-                      type="radio"
-                      name="mindset"
-                      value="I’m angry with myself"
-                      
-                    />
                     <span class="radio-text">I’m angry with myself</span>
                   </label>
                 </li>
 
                 <li>
+                  <input
+                    id="mindset2"
+                    type="radio"
+                    name="mindset"
+                    value="I fear that I’ll fail again"
+                  />
                   <label for="mindset2">
-                    <input
-                      id="mindset2"
-                      type="radio"
-                      name="mindset"
-                      value="I fear that I’ll fail again"
-                    />
                     <span class="radio-text">I fear that I’ll fail again</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="mindset3"
+                    type="radio"
+                    name="mindset"
+                    value="I feel I’m useless"
+                  />
                   <label for="mindset3">
-                    <input
-                      id="mindset3"
-                      type="radio"
-                      name="mindset"
-                      value="I feel I’m useless"
-                    />
                     <span class="radio-text">I feel I’m useless</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="mindset4"
+                    type="radio"
+                    name="mindset"
+                    value="I get mad at others"
+                  />
                   <label for="mindset4">
-                    <input
-                      id="mindset4"
-                      type="radio"
-                      name="mindset"
-                      value="I get mad at others"
-                    />
                     <span class="radio-text">I get mad at others</span>
                   </label>
                 </li>
                 <li>
+                  <input
+                    id="mindset5"
+                    type="radio"
+                    name="mindset"
+                    value="I accept it. It’s part of the game"
+                  />
                   <label for="mindset5">
-                    <input
-                      id="mindset5"
-                      type="radio"
-                      name="mindset"
-                      value="I accept it. It’s part of the game"
-                    />
                     <span class="radio-text"
                       >I accept it. It’s part of the game</span
                     >
@@ -1497,7 +1534,7 @@
                     id="areas-improve1"
                     type="checkbox"
                     name="areas"
-                    value="Hand/eye coordination"     
+                    value="Hand/eye coordination"
                   />
                   <img
                     class="improve-icon"
@@ -1600,23 +1637,74 @@
               </ul>
             </fieldset>
             <div class="buttons_wrapper">
-              <button class="btn_previous">Go back<span class="button_arrow button_arrow_back"><img src="/assets/arrows/arrow-back.svg" alt="back"></span></button>
-              <button id="submit-form" type="submit" class="btn_next">I'm ready to join<span class="button_arrow button_arrow_next"><img src="/assets/arrows/arrow-next.svg" alt="next"></span></button>
-                         </div>
+              <button class="btn_previous">
+                Go back<span class="button_arrow button_arrow_back"
+                  ><img src="/assets/arrows/arrow-back.svg" alt="back"
+                /></span>
+              </button>
+              <button id="submit-form" type="submit" class="btn_next">
+                I'm ready to join<span class="button_arrow button_arrow_next"
+                  ><img src="/assets/arrows/arrow-next.svg" alt="next"
+                /></span>
+              </button>
+            </div>
           </div>
           <div class="form_group" id="step_5">
             <h1>Welcome <span> to the zone!</span></h1>
             <p>Congratulations! You’re all set up.</p>
-            <p>You can access your <strong>Ezone account</strong> and start improving your performace or check the suggested articles below, based on the information you provided us with.</p>
-            <p>Remember that you can customize your preferences any time you want by accessing your account profile.</p>
+            <p>
+              You can access your <strong>Ezone account</strong> and start
+              improving your performace or check the suggested articles below,
+              based on the information you provided us with.
+            </p>
+            <p>
+              Remember that you can customize your preferences any time you want
+              by accessing your account profile.
+            </p>
             <button>Go to my profile</button>
             <div id="img-wrapper">
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article1.webp" alt="suggested-article1" /></div>
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article2.webp" alt="suggested-article2" /></div>
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article3.webp" alt="suggested-article3" /></div>
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article4.webp" alt="suggested-article4" /></div>
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article5.webp" alt="suggested-article5" /></div>
-              <div class="img-container"><img class="suggested" src="/assets/images/suggested-article6.webp" alt="suggested-article6" /></div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article1.webp"
+                  alt="suggested-article1"
+                />
+              </div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article2.webp"
+                  alt="suggested-article2"
+                />
+              </div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article3.webp"
+                  alt="suggested-article3"
+                />
+              </div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article4.webp"
+                  alt="suggested-article4"
+                />
+              </div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article5.webp"
+                  alt="suggested-article5"
+                />
+              </div>
+              <div class="img-container">
+                <img
+                  class="suggested"
+                  src="/assets/images/suggested-article6.webp"
+                  alt="suggested-article6"
+                />
+              </div>
             </div>
           </div>
         </form>

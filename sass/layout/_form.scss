@@ -1,8 +1,6 @@
 @use "../components/buttons";
 @use "../base/typography";
 
-
-
 form {
   font-family: var(--primary-font);
   color: white;
@@ -29,10 +27,9 @@ form {
 }
 
 @keyframes visible {
-  to{
-    opacity:1
+  to {
+    opacity: 1;
   }
-  
 }
 
 #step_1,
@@ -70,7 +67,7 @@ form {
 }
 
 #form_wrapper p {
-  color:white;
+  color: white;
   font-family: var(--primary-font);
   margin: 0 1.5rem;
 }
@@ -176,8 +173,8 @@ option:checked {
 }
 .user,
 .email {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .buttons_wrapper {
   margin-top: 3rem;
@@ -226,7 +223,6 @@ option:checked {
   color: var(--focused-field);
   font-weight: bold;
 }
-
 
 .standard-checkbox input[type="checkbox"]:checked + label {
   color: var(--focused-field);
@@ -285,7 +281,7 @@ option:checked {
   z-index: 1;
 }
 
-.image-checkbox input:focus ~ label::before{
+.image-checkbox input:focus ~ label::before {
   background: rgba(255, 255, 255, 0.274);
 }
 .image-checkbox input:checked ~ label::after {
@@ -354,11 +350,11 @@ option:checked {
   z-index: 1;
 }
 
-.button-checkbox input:focus ~ label::before{
-  background: rgba(255, 255, 255, 0.274)
+.button-checkbox input:focus ~ label::before {
+  background: rgba(255, 255, 255, 0.274);
 }
 
-//add change on focus 
+//add change on focus
 
 .button-checkbox input:checked ~ label::after {
   content: "";
@@ -395,21 +391,18 @@ input[type="radio"] {
   width: 1.4rem;
   background-image: url("/assets/radio-check/radio-button.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 15px;
 }
-
 
 input[type="radio"]:focus + .radio-text {
   font-weight: 700;
-  color: var(--focused-field)
+  color: var(--focused-field);
 }
 
 input[type="radio"]:checked {
   height: 1.4rem;
   width: 1.4rem;
   background-image: url(/assets/radio-check/radio-button-checked.svg);
-  background-size: cover;
+
   background-repeat: no-repeat;
 
   color: var(--focused-field);
@@ -422,18 +415,33 @@ input[type="radio"]:checked + .radio-text {
   font-weight: 700;
 }
 
-.radio-boxes li label {
+/* .radio-boxes li label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1vh 0;
-}
+} */
 .radio-field .hint {
   margin-top: 0.5rem;
 }
+.radio-field li {
+  /*  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-items: baseline;
+  align-content: space-between; */
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 1rem;
+}
+
 .radio-field input:focus-within + .radio-text {
   color: white;
   font-weight: bold;
+}
+.radio-field ul {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 //valid invalid and focus
@@ -473,11 +481,11 @@ input[id="games-played"] {
 
 //progress bar
 
-svg{
-  margin:auto;
+svg {
+  margin: auto;
 }
-circle{
-  cursor:pointer;
+circle {
+  cursor: pointer;
 }
 
 .line {
@@ -485,19 +493,19 @@ circle{
   stroke-miterlimit: 10;
   stroke-width: 19px;
 }
-.background-line{
+.background-line {
   fill: #e3e3e5;
   stroke: #ffffff;
 }
-.progress-line{
+.progress-line {
   fill: #6259fa;
   stroke: #6259fa;
 }
-.cls-circle{
+.cls-circle {
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 19px;
-  fill:white
+  fill: white;
 }
 .cls-unclicked {
   stroke: #ffffff;
@@ -514,48 +522,49 @@ circle{
 
 ///Thank you page
 
-#step_5{
-  margin:0 -1.5rem;
-  display:grid;
+#step_5 {
+  margin: 0 -1.5rem;
+  display: grid;
 }
 
-#step_5 button{
-  margin:5vh auto auto auto;
+#step_5 button {
+  margin: 5vh auto auto auto;
   align-self: center;
 }
 
-#img-wrapper{
- margin-top: 10vw;
- display: grid; 
- justify-content: center;
- grid-gap: 1rem;
- 
+#img-wrapper {
+  margin-top: 10vw;
+  display: grid;
+  justify-content: center;
+  grid-gap: 1rem;
 }
 
-.img-container{
+.img-container {
   max-width: 300px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.img-container img{
+.img-container img {
   transition: 1s ease-in;
 }
 
-.img-container img:hover{
+.img-container img:hover {
   filter: brightness(0.4);
-  transform:scale(1.1)
+  transform: scale(1.1);
 }
-
-
-
-
 
 ///Media queries have been moved down
 @media screen and (max-width: 950px) {
   .image-checkbox ul {
     width: 100%;
   }
+  .user,
+  .email {
+    width: 20px;
+    height: 20px;
+  }
 }
+
 @media screen and (min-width: 951px) and (max-width: 1100px) {
   .image-checkbox ul {
     width: 80%;
@@ -575,23 +584,24 @@ circle{
   #form_wrapper h1 span {
     margin-top: -10px;
   }
-.group_title{
-  font-size: 1.5rem;
-}
-.image-checkbox ul {
-  gap: 1em;
-
-}
-
-.image-checkbox .nutrition-label,
-.image-checkbox .improve-label{
-   font-size: 0.9rem;    
-   }
-
-   #step_5{
-    margin:0;
+  .group_title {
+    font-size: 1.5rem;
   }
-  
+  .image-checkbox ul {
+    gap: 1em;
+  }
+
+  .image-checkbox .nutrition-label,
+  .image-checkbox .improve-label {
+    font-size: 0.9rem;
+  }
+
+  #step_5 {
+    margin: 0;
+  }
+  .radio-text {
+    width: max-content;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -613,21 +623,19 @@ circle{
   #form_wrapper h1 {
     font-size: 3rem;
   }
-  
+
   .input_group {
     margin-bottom: 1.5rem;
   }
 
-  #img-wrapper{
+  #img-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
-   }
-  
-   .img-container:nth-of-type(2), 
-   .img-container:nth-of-type(5){
-    margin-top: -5vh;
-   }
+  }
 
-  
+  .img-container:nth-of-type(2),
+  .img-container:nth-of-type(5) {
+    margin-top: -5vh;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -635,7 +643,6 @@ circle{
   #form_intro {
     margin: 0 18vw;
   }
-  
 
   .progress_bar {
     margin: 4vh 18vw 0 18vw;
