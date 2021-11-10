@@ -41,7 +41,9 @@ export function previousStep(currentStep) {
   stepBackward(currentStep);
 }
 
-export function validateSteps(currentStep, action) {
+export function validateSteps(currentStep) {
+  const typesOfGames =[]
+
   if (currentStep === "step_1") {
     if (document.querySelector("#name").reportValidity()) {
       if (document.querySelector("#email").reportValidity()) {
@@ -57,7 +59,19 @@ export function validateSteps(currentStep, action) {
         .classList.add("dissabled");
     }
   } else if (currentStep === "step_2") {
-    nextStep(currentStep);
+    console.log("step_2")
+    document.querySelectorAll(`input[name="types"]`).forEach((input)=>{
+      if(input.checked){
+        typesOfGames.push(input)
+      }
+    })
+
+    if(typesOfGames.length<1){
+      console.log(typesOfGames)
+      document.querySelector(`#types1`).setCustomValidiy("Please, choose at least one option");
+     
+    }else{
+    nextStep(currentStep);}
   } else if (currentStep === "step_3") {
     nextStep(currentStep);
   }

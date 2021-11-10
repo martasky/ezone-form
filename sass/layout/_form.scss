@@ -132,6 +132,10 @@ option:checked {
 
 
 
+
+
+
+
 //Title section, labels, legend and hint text; Valid/invalid/focus
 
 .group_title {
@@ -558,6 +562,11 @@ circle{
   transform:scale(1.1)
 }
 
+.required{
+  font-size: 0.7rem;
+  color: var(--light-purple);
+  margin:0
+}
 
 
 
