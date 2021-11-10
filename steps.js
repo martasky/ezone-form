@@ -28,15 +28,15 @@ export function previousStep(currentStep) {
   if (currentStep === "step_2") {
     step2.classList.remove("visible");
     step1.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   } else if (currentStep === "step_3") {
     step3.classList.remove("visible");
     step2.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   } else if (currentStep === "step_4") {
     step4.classList.remove("visible");
     step3.classList.add("visible");
-    document.querySelector("svg").scrollIntoView();
+    document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
   }
   stepBackward(currentStep);
 }
@@ -103,7 +103,8 @@ let nextDestination = circleClicked.slice(7);
 let currentPage = visibleStep.slice(5);
 document.querySelector(`#${visibleStep}`).classList.remove("visible");
 document.querySelector(`#step_${nextDestination}`).classList.add("visible");
-changeStep(currentPage, nextDestination)
+document.querySelector(`#form_intro p:nth-of-type(2)`).scrollIntoView();
+changeStep(currentPage, nextDestination);
 
 }
 

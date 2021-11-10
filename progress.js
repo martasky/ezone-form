@@ -1,6 +1,6 @@
 
 
-const progressBar = document.querySelector(".progress_bar svg");
+const backgroundLine = document.querySelector("#background-line");
 const progressLine = document.querySelector("#progress-line");
 
 const circle1 = document.querySelector("#circle_1");
@@ -12,6 +12,7 @@ const step1Value = circle1.cx.baseVal.value;
 const step2Value = circle2.cx.baseVal.value;
 const step3Value = circle3.cx.baseVal.value;
 const step4Value = circle4.cx.baseVal.value;
+const step5Value = backgroundLine.x2.baseVal.value
 
 
 
@@ -33,7 +34,9 @@ export function stepForward(currentStep){
         circle3.classList.toggle("cls-focused");
         circle4.classList.toggle("cls-focused"); 
     }else if (currentStep ==="step_4"){
-        console.log("Gracias!");
+        progressLine.x2.baseVal.value = step5Value;
+        circle4.classList.add("cls-clicked");
+        circle4.classList.toggle("cls-focused"); 
     }
 
 }
