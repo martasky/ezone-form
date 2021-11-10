@@ -158,7 +158,7 @@ option:checked {
 }
 ::placeholder {
   color: var(--placeholder);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon {
@@ -452,40 +452,38 @@ circle{
   cursor:pointer;
 }
 
-.cls-1,
-.cls-2,
-.cls-5 {
-  fill: #e3e3e5;
-}
-
-.cls-1,
-.cls-3 {
-  stroke: #ffffff;
-}
-
-.cls-1,
-.cls-2,
-.cls-3 {
+.line {
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 19px;
 }
-
-.cls-2 {
+.background-line{
+  fill: #e3e3e5;
+  stroke: #ffffff;
+}
+.progress-line{
+  fill: #6259fa;
   stroke: #6259fa;
 }
-
-.cls-3 {
+.cls-circle{
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 19px;
+  fill:white
+}
+.cls-unclicked {
+  stroke: #ffffff;
   fill: var(--background-color);
 }
-
-.cls-4 {
-  fill: #fff;
+.cls-clicked {
+  stroke: #6259fa;
+  fill: var(--background-color);
 }
 .cls-focused {
   fill: #6259fa;
   stroke: #ffffff;
 }
+
 ///Thank you page
 
 #img-wrapper{
