@@ -19,8 +19,8 @@ form.addEventListener("submit", (e) => {
       email: form.elements.email.value,
       gamertag: form.elements.gamertag.value,
       password: form.elements.password.value,
-      /*    types: selectArr.types,
-      played: selectArr.games, */
+      types: arrays.types,
+      played: arrays.games,
       motives: arrays.motives,
       sleep: form.elements.sleep.value,
       nutrition: arrays.nutrition,
@@ -96,8 +96,6 @@ function getValue() {
     played: playedArr,
   };
 }
-
-
 
 //event listeners to advance
 document.querySelectorAll(".btn_next").forEach((button) => {
