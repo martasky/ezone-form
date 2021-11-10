@@ -20,7 +20,7 @@ form {
 }
 
 .visible {
-  display: block;
+  display: contents;
   pointer-events: all;
   animation: visible 0.7s ease-in-out 1 forwards;
   background-color: var(--background-color);
