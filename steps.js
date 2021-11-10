@@ -67,9 +67,10 @@ export function validateSteps(currentStep) {
     })
 
     if(typesOfGames.length<1){
-      console.log(typesOfGames)
-      document.querySelector(`#types1`).setCustomValidiy("Please, choose at least one option");
-     
+      console.log("choose a type of game")
+      document.querySelector(`#types1`).setCustomValidity("Please, choose at least one option");
+      document.querySelector(`#types1`).scrollIntoView();
+      document.querySelector(`#types1`).reportValidity();
     }else{
     nextStep(currentStep);}
   } else if (currentStep === "step_3") {
