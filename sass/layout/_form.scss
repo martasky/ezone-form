@@ -16,16 +16,17 @@ form {
 }
 
 .form_group {
-  background-color: var(--background-color);
-  opacity: 0;
+  display:none;
   pointer-events: none;
-  display: none;
+  opacity:0;
+
 }
 
 .visible {
   display: block;
   pointer-events: all;
   animation: visible 0.7s ease-in-out 1 forwards;
+  background-color: var(--background-color);
 }
 
 @keyframes visible {
@@ -38,10 +39,14 @@ form {
 #step_1,
 #step_2,
 #step_3,
-#step_4 {
+#step_4,
+#step_5 {
   grid-area: 1/1;
 }
-
+#step_5 {
+  order: -5;
+  display:none;
+}
 #step_4 {
   order: -4;
 }

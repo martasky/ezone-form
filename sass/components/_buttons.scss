@@ -126,6 +126,15 @@ button {
   margin-right: 10px;
 } */
 
+@media screen and (max-width: 400px){
+  .btn_next, .btn_previous{
+    font-size: 0.7rem;
+   }
+   #step_4 button{
+    padding: 0.5rem 0.5rem;
+   }
+}
+
 @media screen and (min-width: 1600px) {
   .sticky-wrap {
     top: 75vh;
